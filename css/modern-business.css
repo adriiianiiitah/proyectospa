@@ -74,24 +74,31 @@ footer {
 }
 
 #imagen-carrusel-01 {
-    background: url(/Spa/img/imagen_01.png) no-repeat;
+    /*background: url(/Spa/img/imagen_01.png) no-repeat;*/
+    margin: auto;
 }
 
 #imagen-carrusel-02 {
-    background: url(/Spa/img/imagen_02.png) no-repeat;
+    /*background: url(/Spa/img/imagen_02.png) no-repeat;*/
+    margin: auto;
 }
 
 #imagen-carrusel-03 {
-    background: url(/Spa/img/imagen_03.png) no-repeat;
+    /*background: url(/Spa/img/imagen_03.png) no-repeat;*/
+    margin: auto;
 }
 
 #imagen-carrusel-04 {
-    background: url(/Spa/img/imagen_04.png) no-repeat;
+    /*background: url(/Spa/img/imagen_04.png) no-repeat;*/
+    margin: auto;
 }
 
 #imagen-carrusel-05 {
-    background: url(/Spa/img/imagen_05.png) no-repeat;
+    /*background: url(/Spa/img/imagen_05.png) no-repeat;*/
+    margin: auto;
 }
+
+
 
 /* Responsive Styles */
 
