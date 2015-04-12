@@ -297,6 +297,18 @@ fieldset[disabled] .btn-info.active {
   right: 5px;
 }
 
+fieldset {
+  border: 1px solid white;
+  -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow:    2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow:         2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+legend {
+  margin: 10px;
+  color: hotpink;
+}
 footer p {
     color: white;
     font-family: inherit;

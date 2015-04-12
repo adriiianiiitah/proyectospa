@@ -1,0 +1,97 @@
+	
+	<div class="container">
+			<form class="form-horizontal" role="form">
+
+				<fieldset>
+					<legend>Datos Generales</legend>
+					<div class="form-group">
+						<label for="nombre" class="col-xs-12 col-sm-3 control-label">Nombre :</label>
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" id="nombre" class="form-control" name="nombre" placeholder="" onblur="esNombre(this)" required/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="apellidos" class="col-xs-12 col-sm-3 control-label">Apellidos :</label>
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" id="apellidos" class="form-control" name="apellidos" placeholder="" onblur="esApellido(this)" required/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="usuario" class="col-xs-12 col-sm-3 control-label">Usuario :</label>
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" id="usuario" class="form-control" name="usuario" placeholder="" onblur="esUsuario(this)" required/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="correo" class="col-xs-12 col-sm-3 control-label">Correo :</label>
+						<div class="col-xs-12 col-sm-6">
+							<input type="email" id="correo" class="form-control" name="email" placeholder="" onblur="esEmail(this)" required/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="contrasena1" class="col-xs-12 col-sm-3 col-md-3 control-label">Contraseña :</label>
+						<div class="col-xs-12 col-sm-3 col-md-3 ">
+							<input type="text" id="contrasena1" class="form-control" name="contrasena" placeholder="" onblur="esContrasena(this)" required/>
+						</div>
+						<label for="contrasena2" class="col-xs-12 col-sm-3 col-md-2 control-label">Repetir contraseña :</label>
+						<div class="col-xs-12 col-sm-3 col-md-3">
+							<input type="password" id="contrasena2" class="form-control" name="contrasena2" placeholder="" onblur="esContrasena(this); coinciden(this)" required/>
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend>Datos Generales</legend>
+					<div class="form-group">
+						<label for="domicio" class="col-xs-12 col-sm-3 control-label">Domicio :</label>
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" id="domicio" class="form-control" name="domicio" placeholder="" onblur="esDomicilio(this)" required/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="colonia" class="col-xs-12 col-sm-3 control-label">Colonia :</label>
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" id="colonia" class="form-control" name="colonia" placeholder="" onblur="esColonia(this)" required/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="municipio" class="col-xs-12 col-sm-3 col-md-3 control-label">Municipio :</label>
+						<div class="col-xs-12 col-sm-3 col-md-3 ">
+							<select id="municipio" class="selectpicker form-control" name="municipio" data-style="btn-info">
+								<option value="guadalajara" selected="true">Guadalajara</option>
+						    <option value="tlaquepaque">Tlaquepaque</option>
+						    <option value="tonala">Tonalá</option>
+						    <option value="zapopan">Zapopan</option>
+							</select>
+						</div>
+						<label for="municipio" class="col-xs-12 col-sm-3 col-md-2 control-label">Estado :</label>
+						<div class="col-xs-12 col-sm-3 col-md-3 ">
+							<select id="municipio" class="selectpicker form-control" name="municipio">
+								<option value="guadalajara" selected="true">Jalisco</option>
+						    <option value="tlaquepaque">Colima</option>
+						    <option value="tonala">Aguascalientes</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="codigo_postal" class="col-xs-12 col-sm-3 col-md-3 control-label">Código Postal :</label>
+						<div class="col-xs-12 col-sm-3 col-md-3 ">
+							<input type="number" id="codigo_postal" class="form-control" name="codigo_postal" placeholder="" step="1" min="10000" max="100000" required/>
+						</div>
+					</div>
+				</fieldset>
+
+					<div class="form-group">
+						<div class="col-xs-12 col-sm-3 col-md-3 ">
+							<button type="submit" class="btn btn-pink"> Registrarse</button>
+						</div>
+					</div>
+			</form>
+		</div>
