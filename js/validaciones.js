@@ -152,3 +152,80 @@ function esColonia(elemento) {
 	  }
 	}
 }
+
+function esTelefono(elemento) {
+	var padre = elemento.parentNode;
+	var telefono = elemento.value;
+	var abuelo = padre.parentNode;
+
+	if (telefono=="") {
+		abuelo.className = 'form-group has-error';
+	} else {
+		var expreg = /^[0-9]{3,4}-? ?.?[0-9]{3}-? ?.?[0-9]{3}$/;
+  
+	  if(expreg.test(telefono)) {
+		abuelo.className = 'form-group has-success';
+	  }
+	  else {
+	  	abuelo.className = 'form-group has-error';
+	  }
+	}
+}
+
+function esCodigoPostal(elemento) {
+	var padre = elemento.parentNode;
+	var codigo_postal = elemento.value;
+	var abuelo = padre.parentNode;
+
+	if (codigo_postal=="" && codigo_postal.length != 5) {
+		abuelo.className = 'form-group has-error';
+	} else {
+		var expreg = /^[0-9]{5}$/;
+  
+	  if(expreg.test(codigo_postal)) {
+		abuelo.className = 'form-group has-success';
+	  }
+	  else {
+	  	abuelo.className = 'form-group has-warning';
+	  }
+	}
+}
+
+var numero_telefonos = 1;
+
+function agregarTelefono() {
+	var div_telefono = document.getElementById('div-telefono');
+	var nuevo_div = div_telefono.cloneNode(true);
+	var etiqueta = nuevo_div.getElementsByTagName('label')[0];
+	div_telefono.setAttribute('id','div_telefono'+numero_telefonos);
+	etiqueta.setAttribute("for", "telefono"+numero_telefonos);
+	caja =  nuevo_div.getElementsByTagName('input')[0];
+	caja.setAttribute("id", "telefono"+numero_telefonos);
+
+	var div_contrasenas = document.getElementById('div-contrasenas');
+	var div_padre = div_telefono.parentNode;
+	div_padre.insertBefore(nuevo_div, div_contrasenas);
+	numero_telefonos++;
+}
+
+function esUsuarioRegistrado() {
+	var usuario = document.getElementById('usuario-login');
+	return false;
+	
+}
+
+function esPassworCorrecto() {
+	var usuario = document.getElementById('usuario-login');
+	var password = document.getElementById('password-login');
+	return true;
+	
+}
+
+function esUsuarioValido(formulario) {
+	if(esUsuarioRegistrado() && esPassworCorrecto()) {
+		formulario.style.display = 'none';
+		//cerrar sesion ocultar
+	} else {
+		alert('El Usuario y la contrasrña son incorrectos.');
+	}
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "tipo": "admin",
+        "nombre": "Michelle Torres",
+        "usuario": "administrador",
+        "password": "topicos419"
+    },
+    {
+        "tipo": "usuario",
+        "nombre": "Valdez Gómez Victor Manuel",
+        "usuario": "vicMan513",
+        "password": "elVict0r69"
+    },
+    {
+        "tipo": "usuario",
+        "nombre": "Lorena Sánchez De La Vega",
+        "usuario": "lorenita-BB",
+        "password": "coraz0ncitoomiAmor"
+    },
+    {
+        "tipo": "usuario",
+        "nombre": "Perla Alicia Vera Padilla",
+        "usuario": "paVepa",
+        "password": "1234"
+    },
+    {
+        "tipo": "usuario",
+        "nombre": "Gaciela Celis",
+        "usuario": "grace-celis",
+        "password": "p3k3ñitA"
+    }
+]

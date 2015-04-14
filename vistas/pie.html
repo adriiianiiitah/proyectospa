@@ -1,4 +1,4 @@
-               
+           
     <footer>
         <div class="container">
             <div class="row">
@@ -31,14 +31,14 @@
                 <div class="col-xs-12 col-sm-12 col-md-3 form-inicio-sesion">
                     <h3>Iniciar sesión</h3>
                     <div class="form">
-                        <form role="form" action="../index.php">
+                        <form role="form" action="./index.php" onsubmit="return esUsuarioValido(this)">
                             <div class="form-group">
-                                <label for="usuario" class="sr-only"></label>
-                                <input type="text" id="usuario" name="usuario" class="form-control" placeholder="usuario" />
+                                <label for="usuario-login" class="sr-only"></label>
+                                <input type="text" id="usuario-login" name="usuario" class="form-control" placeholder="" />
                             </div>
                             <div class="form-group">
-                                <label for="password" class="sr-only"></label>
-                                <input type="password" id="password" name="password" class="form-control" placeholder="">
+                                <label for="password-login" class="sr-only"></label>
+                                <input type="password" id="password-login" name="password" class="form-control" placeholder=""/>
                             </div>
                             <div>
                                 <div class="checkbox">
