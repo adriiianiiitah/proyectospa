@@ -1,6 +1,6 @@
 	
 	<div class="container">
-			<form class="form-horizontal" role="form" onsubmit="return validar();">
+			<form class="form-horizontal" role="form" onsubmit="return esRegistroCorrecto(this);" action="../php/panel.php">
 
 				<fieldset>
 					<legend>Datos Generales</legend>
@@ -35,7 +35,7 @@
 					<div class="form-group" id="div-telefono">
 						<label for="telefono" class="col-xs-12 col-sm-3 control-label">Teléfono:</label>
 						<div class="col-xs-10 col-sm-5">
-							<input type="email" id="telefono" class="form-control" name="telefono" placeholder="" onblur="esTelefono(this)" required/>
+							<input type="text" id="telefono" class="form-control" name="telefono" placeholder="" onblur="esTelefono(this)" required/>
 						</div>
 						<div class="col-xs-2 col-sm-1">
 							<button type="button" class="btn" onclick="agregarTelefono()">+</button>
@@ -45,7 +45,7 @@
 					<div class="form-group" id="div-contrasenas">
 						<label for="contrasena1" class="col-xs-12 col-sm-3 col-md-3 control-label">Contraseña:</label>
 						<div class="col-xs-12 col-sm-3 col-md-3 ">
-							<input type="text" id="contrasena1" class="form-control" name="contrasena" placeholder="" onblur="esContrasena(this)" required/>
+							<input type="password" id="contrasena1" class="form-control" name="contrasena" placeholder="" onblur="esContrasena(this)" required/>
 						</div>
 						<label for="contrasena2" class="col-xs-12 col-sm-3 col-md-2 control-label">Repetir contraseña:</label>
 						<div class="col-xs-12 col-sm-3 col-md-3">
@@ -59,7 +59,7 @@
 					<div class="form-group">
 						<label for="domicio" class="col-xs-12 col-sm-3 control-label">Domicio:</label>
 						<div class="col-xs-12 col-sm-6">
-							<input type="text" id="domicio" class="form-control" name="domicio" placeholder="" onblur="esDomicilio(this)" required/>
+							<input type="text" id="domicilio" class="form-control" name="domicio" placeholder="" onblur="esDomicilio(this)" required/>
 						</div>
 					</div>
 

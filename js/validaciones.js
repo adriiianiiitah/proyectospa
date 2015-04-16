@@ -5,15 +5,18 @@ function esNombre(elemento) {
 	var abuelo = padre.parentNode;
 
 	if (nombre=="") {
-		abuelo.className = 'form-group has-error'
+		abuelo.className = 'form-group has-error';
+		return false;
 	} else {
 		var expreg = /^(([A-Za-záéíóúñ]{2,})|([A-Za-záéíóúñ]{2,}[\s][A-Za-záéíóúñ]{2,}))+$/;
   
 	  if(expreg.test(nombre)) {
-		abuelo.className = 'form-group has-success'
+		abuelo.className = 'form-group has-success';
+		return true;
 	  }
 	  else {
-	  	abuelo.className = 'form-group has-error'
+	  	abuelo.className = 'form-group has-error';
+	  	return false;
 	  }
 	}
 }
@@ -25,14 +28,17 @@ function esApellido(elemento) {
 
 	if (apellido=="") {
 		abuelo.className = 'form-group has-error';
+		return false;
 	} else {
 		var expreg = /^(([A-Za-záéíóúñ]{2,})|([A-Za-záéíóúñ]{2,}[\s][A-Za-záéíóúñ]{2,}))+$/;
   
 	  if(expreg.test(apellido)) {
 		abuelo.className = 'form-group has-success';
+		return true;
 	  }
 	  else {
 	  	abuelo.className = 'form-group has-error';
+	  	return false;
 	  }
 	}
 }
@@ -44,14 +50,17 @@ function esUsuario(elemento) {
 
 	if (usuario=="") {
 		abuelo.className = 'form-group has-error';
+		return false;
 	} else {
 		var expreg = /^[A-Za-z0-9_-]{3,15}$/;
   
 	  if(expreg.test(usuario)) {
 		abuelo.className = 'form-group has-success';
+		return true;
 	  }
 	  else {
 	  	abuelo.className = 'form-group has-error';
+	  	return false;
 	  }
 	}
 }
@@ -63,14 +72,17 @@ function esEmail(elemento) {
 
 	if (correo=="") {
 		abuelo.className = 'form-group has-error';
+		return false;
 	} else {
 		var expreg = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
   
 	  if(expreg.test(correo)) {
 		abuelo.className = 'form-group has-success';
+		return true;
 	  }
 	  else {
 	  	abuelo.className = 'form-group has-error';
+	  	return false;
 	  }
 	}
 }
@@ -81,14 +93,38 @@ function esContrasena(elemento) {
 
 	if (contrasena=="") {
 		padre.className = 'col-xs-12 col-sm-3 col-md-3 has-error';
+		return false;
 	} else {
 		var expreg = /(^(?=.*[a-z])(?=.*[A-Z])(?=.*\d){6,}.+$)/;
   
 	  if(expreg.test(contrasena)) {
 		padre.className = 'col-xs-12 col-sm-3 col-md-3 has-success';
+		return true;
 	  }
 	  else {
 	  	padre.className = 'col-xs-12 col-sm-3 col-md-3 has-error';
+	  	return false;
+	  }
+	}
+}
+
+function esContrasenia(elemento) {
+	var padre = elemento.parentNode;
+	var contrasena = elemento.value;
+
+	if (contrasena=="") {
+		padre.className = 'has-error';
+		return false;
+	} else {
+		var expreg = /(^(?=.*[a-z])(?=.*[A-Z])(?=.*\d){6,}.+$)/;
+  
+	  if(expreg.test(contrasena)) {
+		padre.className = 'has-success';
+		return true;
+	  }
+	  else {
+	  	padre.className = 'has-error';
+	  	return false;
 	  }
 	}
 }
@@ -102,15 +138,18 @@ function coinciden(elemento) {
 
 	if (contrasena2=="") {
 		abuelo.className = 'form-group has-error';
+		return false;
 	} else {
 		var expreg = /(^(?=.*[a-z])(?=.*[A-Z])(?=.*\d){6,}.+$)/;
   
 	  if(expreg.test(contrasena2) && (contrasena1==contrasena2)) {
 		abuelo.className = 'form-group has-success';
+		return true;
 	  }
 	  else {
 	  	padre.className = 'col-xs-12 col-sm-3 col-md-3 has-error';
 	  	abuelo.className = 'form-group has-error';
+	  	return false;
 	  }
 	}
 }
@@ -122,14 +161,17 @@ function esDomicilio(elemento) {
 
 	if (domicilio=="") {
 		abuelo.className = 'form-group has-error';
+		return false;
 	} else {
 		var expreg = /^[A-Za-záéíóúñ]{2,}([\s][A-Za-záéíóúñ0-9]{1,})+$/;
   
 	  if(expreg.test(domicilio)) {
 		abuelo.className = 'form-group has-success';
+		return true;
 	  }
 	  else {
 	  	abuelo.className = 'form-group has-error';
+	  	return false;
 	  }
 	}
 }
@@ -141,14 +183,17 @@ function esColonia(elemento) {
 
 	if (colonia=="") {
 		abuelo.className = 'form-group has-error';
+		return false;
 	} else {
 		var expreg = /^(([A-Za-záéíóúñ]{2,})|([\s][A-Za-záéíóúñ]{2,}))+$/;
   
 	  if(expreg.test(colonia)) {
 		abuelo.className = 'form-group has-success';
+		return true;
 	  }
 	  else {
 	  	abuelo.className = 'form-group has-error';
+	  	return false;
 	  }
 	}
 }
@@ -160,14 +205,17 @@ function esTelefono(elemento) {
 
 	if (telefono=="") {
 		abuelo.className = 'form-group has-error';
+		return false;
 	} else {
 		var expreg = /^[0-9]{3,4}-? ?.?[0-9]{3}-? ?.?[0-9]{3}$/;
   
 	  if(expreg.test(telefono)) {
 		abuelo.className = 'form-group has-success';
+		return true;
 	  }
 	  else {
 	  	abuelo.className = 'form-group has-error';
+	  	return false;
 	  }
 	}
 }
@@ -179,14 +227,17 @@ function esCodigoPostal(elemento) {
 
 	if (codigo_postal=="" && codigo_postal.length != 5) {
 		abuelo.className = 'form-group has-error';
+		return false;
 	} else {
 		var expreg = /^[0-9]{5}$/;
   
 	  if(expreg.test(codigo_postal)) {
 		abuelo.className = 'form-group has-success';
+		return true;
 	  }
 	  else {
 	  	abuelo.className = 'form-group has-warning';
+	  	return false;
 	  }
 	}
 }
@@ -222,10 +273,104 @@ function esPassworCorrecto() {
 }
 
 function esUsuarioValido(formulario) {
-	if(esUsuarioRegistrado() && esPassworCorrecto()) {
-		formulario.style.display = 'none';
-		//cerrar sesion ocultar
+	var usuario = document.getElementById('usuario-login');
+	var contrasena = document.getElementById('password-login')	
+
+	if(esUsuario(usuario) && esContrasenia(contrasena)) {
+		return true;
+		alert('ola k ase');
 	} else {
-		alert('El Usuario y la contrasrña son incorrectos.');
+		return false;
 	}
+}
+
+function estaVacio(elemento) {
+	var padre = elemento.parentNode;
+	var texto = elemento.value;
+	var abuelo = padre.parentNode;
+
+	if (texto=="") {
+		abuelo.className = 'form-group has-error';
+		return false;
+	} else {
+		var expreg = /^(([A-Za-záéíóúñ]{2,})|([A-Za-záéíóúñ]{2,}[\s][A-Za-záéíóúñ]{2,}))+$/;
+  
+	  if(expreg.test(texto)) {
+		abuelo.className = 'form-group has-success';
+		return true;
+	  }
+	  else {
+	  	abuelo.className = 'form-group has-error';
+	  	return false;
+	  }
+	}
+}
+
+function validarFormContacto(formulario) {
+	var nombre = document.getElementById('nombre');
+	var correo = document.getElementById('email');
+	var mensaje = document.getElementById('mensaje');
+	var es_correcto = true;
+
+	if(!esNombre(nombre)) {
+		es_correcto = false;
+	}
+	if(!esEmail(correo)) {
+		es_correcto = false;
+	}
+	if (!estaVacio(this)) {
+		es_correcto = false;
+	};
+
+	return es_correcto;
+}
+
+function esRegistroCorrecto(formulario) {
+	var nombre = document.getElementById('nombre');
+	var apellidos = document.getElementById('apellidos');
+	var usuario = document.getElementById('usuario');
+	var correo = document.getElementById('correo');
+	var telefono = document.getElementById('telefono');
+	var contrasena1 = document.getElementById('contrasena1');
+	var contrasena2 = document.getElementById('contrasena2');
+	var domicilio = document.getElementById('domicilio');
+	var colonia = document.getElementById('colonia');
+	var codigo_postal = document.getElementById('codigo_postal');
+
+	var es_correcto = true;
+
+	if(!esNombre(nombre)) {
+		es_correcto = false;
+	}
+	if(!esApellido(apellidos)) {
+		es_correcto = false;
+	}
+	if(!esUsuario(usuario)) {
+		es_correcto = false;
+	}
+	if(!esEmail(correo)) {
+		es_correcto = false;
+	}
+	if(!esTelefono(telefono)) {
+		es_correcto = false;
+	}
+	if(!esContrasena(contrasena1)) {
+		es_correcto = false;
+	}
+	if(!esContrasena(contrasena2)) {
+		es_correcto = false;
+	}
+	if(!coinciden(contrasena2)) {
+		es_correcto = false;
+	}
+	if(!esDomicilio(domicilio)) {
+		es_correcto = false;
+	}
+	if(!esColonia(colonia)) {
+		es_correcto = false;
+	}
+	if(!esCodigoPostal(codigo_postal)) {
+		es_correcto = false;
+	}
+	return es_correcto;
 }

@@ -27,29 +27,27 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-5 formulario">
+            <div class="col-xs-10 col-xs-1 col-sm-4 col-sm-offset-1">
                 <h3>Contáctanos</h3>
-                    <div class="form formulario">
-                        <form role="form" action="#">
-                            <div class="form-group input-group-lg">
+                    <div class="form">
+                        <form role="form" action="#" onsubmit="return validarFormContacto(this)" >
+                            <div class="form-group">
                                 <label for="nombre" class="sr-only">Nombre :</label>
-                                <input type="text" id="nombre" name="nombre" class="form-control" placeholder="nombre" />
+                                <div>
+                                    <input type="text" id="nombre" name="nombre" class="form-control" onblur="esNombre(this)" placeholder="" />
+                                </div>
                             </div>
-                            <div class="form-group input-group-lg">
+                            <div class="form-group">
                                 <label for="email" class="sr-only">Correo :</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="correo" />
-                            </div>
-                            <div class="form-group input-group-lg">
-                                <label for="telefono" class="sr-only">Teléfono :</label>
-                                <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="telefono" />
-                            </div>
-                            <div class="form-group input-group-lg">
-                                <label for="horario" class="sr-only">Horario :</label>
-                                <input type="text" id="horario" name="horario" class="form-control" placeholder="horario" />
+                                <div>
+                                    <input type="email" id="email" name="email" class="form-control" onblur="esEmail(this)" placeholder="" />
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="mensaje" class="sr-only">Mensaje :</label>
-                                <textarea rows="5" name="mensaje" id="mensaje" placeholder="mensaje" class="form-control"></textarea>
+                                <div>
+                                    <textarea rows="5" name="mensaje" id="mensaje" placeholder="mensaje" onblur="estaVacio(this)" class="form-control"></textarea>
+                                </div>
                             </div>
                             <div>
                                 <input type="checkbox" value="recordar-contrasena">Recordar contraseña

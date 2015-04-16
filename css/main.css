@@ -100,9 +100,13 @@ textarea {
     float: left;
 }
 
+iframe {
+  margin-bottom: 20px;
+}
+
 footer {
     margin: 0;
-    background-color: #FFEFFD;/*rgba(0,0,0,0.9);*/
+    background-color: #FFA6D3;/*rgba(0,0,0,0.9);*/
 }
 
 .container {
@@ -133,7 +137,7 @@ footer {
 }
 
 .icono-rosa {
-    color: #FFA0D0;
+    color: #DB7093;
     font-size: 20px;
 }
 
