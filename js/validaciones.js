@@ -374,3 +374,16 @@ function esRegistroCorrecto(formulario) {
 	}
 	return es_correcto;
 }
+
+function habilitaFormulario() {
+	var inpus = document.getElementsByTagName('input');
+	var selects = document.getElementsByTagName('select');
+
+	for(var i = 0; i < inpus.length; i++) {
+		inpus[i].readOnly = false;
+	}
+
+	for(var j = 0; j < selects.length; j++) {
+		selects[j].readOnly = false;
+	}
+}

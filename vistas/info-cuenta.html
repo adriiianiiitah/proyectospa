@@ -6,35 +6,35 @@
 			<div class="form-group">
 				<label for="nombre" class="col-xs-12 col-sm-3 control-label">Nombre:</label>
 				<div class="col-xs-12 col-sm-6">
-					<input type="text" id="nombre" class="form-control" name="nombre" placeholder="" onblur="esNombre(this)" required/>
+					<input type="text" id="nombre" class="form-control" name="nombre" placeholder="" onblur="esNombre(this)" required readonly />
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label for="apellidos" class="col-xs-12 col-sm-3 control-label">Apellidos:</label>
 				<div class="col-xs-12 col-sm-6">
-					<input type="text" id="apellidos" class="form-control" name="apellidos" placeholder="" onblur="esApellido(this)" required/>
+					<input type="text" id="apellidos" class="form-control" name="apellidos" placeholder="" onblur="esApellido(this)" required readonly/>
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label for="usuario" class="col-xs-12 col-sm-3 control-label">Usuario:</label>
 				<div class="col-xs-12 col-sm-6">
-					<input type="text" id="usuario" class="form-control" name="usuario" placeholder="" onblur="esUsuario(this)" required/>
+					<input type="text" id="usuario" class="form-control" name="usuario" placeholder="" onblur="esUsuario(this)" required readonly/>
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label for="correo" class="col-xs-12 col-sm-3 control-label">Correo:</label>
 				<div class="col-xs-12 col-sm-6">
-					<input type="email" id="correo" class="form-control" name="email" placeholder="" onblur="esEmail(this)" required/>
+					<input type="email" id="correo" class="form-control" name="email" placeholder="" onblur="esEmail(this)" required readonly/>
 				</div>
 			</div>
 
 			<div class="form-group" id="div-telefono">
 				<label for="telefono" class="col-xs-12 col-sm-3 control-label">Teléfono:</label>
 				<div class="col-xs-10 col-sm-5">
-					<input type="text" id="telefono" class="form-control" name="telefono" placeholder="" onblur="esTelefono(this)" required/>
+					<input type="text" id="telefono" class="form-control" name="telefono" placeholder="" onblur="esTelefono(this)" required readonly/>
 				</div>
 				<div class="col-xs-2 col-sm-1">
 					<button type="button" class="btn" onclick="agregarTelefono()">+</button>
@@ -44,11 +44,11 @@
 			<div class="form-group" id="div-contrasenas">
 				<label for="contrasena1" class="col-xs-12 col-sm-3 col-md-3 control-label">Contraseña:</label>
 				<div class="col-xs-12 col-sm-3 col-md-3 ">
-					<input type="password" id="contrasena1" class="form-control" name="contrasena" placeholder="" onblur="esContrasena(this)" required/>
+					<input type="password" id="contrasena1" class="form-control" name="contrasena" placeholder="" onblur="esContrasena(this)" required readonly/>
 				</div>
 				<label for="contrasena2" class="col-xs-12 col-sm-3 col-md-2 control-label">Repetir contraseña:</label>
 				<div class="col-xs-12 col-sm-3 col-md-3">
-					<input type="password" id="contrasena2" class="form-control" name="contrasena2" placeholder="" onblur="esContrasena(this); coinciden(this)" required/>
+					<input type="password" id="contrasena2" class="form-control" name="contrasena2" placeholder="" onblur="esContrasena(this); coinciden(this)" required readonly/>
 				</div>
 			</div>
 		</fieldset>
@@ -58,21 +58,21 @@
 			<div class="form-group">
 				<label for="domicio" class="col-xs-12 col-sm-3 control-label">Domicio:</label>
 				<div class="col-xs-12 col-sm-6">
-					<input type="text" id="domicilio" class="form-control" name="domicio" placeholder="" onblur="esDomicilio(this)" required/>
+					<input type="text" id="domicilio" class="form-control" name="domicio" placeholder="" onblur="esDomicilio(this)" required readonly/>
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label for="colonia" class="col-xs-12 col-sm-3 control-label">Colonia:</label>
 				<div class="col-xs-12 col-sm-6">
-					<input type="text" id="colonia" class="form-control" name="colonia" placeholder="" onblur="esColonia(this)" required/>
+					<input type="text" id="colonia" class="form-control" name="colonia" placeholder="" onblur="esColonia(this)" required readonly/>
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label for="municipio" class="col-xs-12 col-sm-3 col-md-3 control-label">Municipio:</label>
 				<div class="col-xs-12 col-sm-3 col-md-3 ">
-					<select id="municipio" class="selectpicker form-control" name="municipio" data-style="btn-info">
+					<select id="municipio" class="selectpicker form-control" name="municipio" data-style="btn-info" readonly>
 						<option value="guadalajara" selected="true">Guadalajara</option>
 					    <option value="tlaquepaque">Tlaquepaque</option>
 					    <option value="tonala">Tonalá</option>
@@ -81,7 +81,7 @@
 				</div>
 				<label for="municipio" class="col-xs-12 col-sm-3 col-md-2 control-label">Estado:</label>
 				<div class="col-xs-12 col-sm-3 col-md-3 ">
-					<select id="municipio" class="selectpicker form-control" name="municipio">
+					<select id="municipio" class="selectpicker form-control" name="municipio" readonly>
 						<option value="guadalajara" selected="true">Jalisco</option>
 				    <option value="tlaquepaque">Colima</option>
 				    <option value="tonala">Aguascalientes</option>
@@ -92,15 +92,19 @@
 			<div class="form-group">
 				<label for="codigo_postal" class="col-xs-12 col-sm-3 col-md-3 control-label">Código Postal:</label>
 				<div class="col-xs-12 col-sm-3 col-md-3 ">
-					<input type="number" id="codigo_postal" class="form-control" name="codigo_postal" placeholder="" step="1" min="10000" max="99999" onblur="esCodigoPostal(this)" required/>
+					<input type="number" id="codigo_postal" class="form-control" name="codigo_postal" placeholder="" step="1" min="10000" max="99999" onblur="esCodigoPostal(this)" required readonly/>
 				</div>
 			</div>
 		</fieldset>
 
 			<div class="form-group">
-				<div class="col-xs-12 col-sm-3 col-md-3 ">
-					<button type="submit" class="btn btn-pink"> Registrarse</button>
+				<div class="col-xs-12 col-sm-3 col-sm-offset-5 col-md-3 col-md-offset-5">
+					<button type="button" id="btn-editar" onclick="habilitaFormulario()" class="btn btn-pink">Editar</button>
+					<button type="submit" class="btn btn-pink">Guardar</button>
 				</div>
 			</div>
+			<script type="text/javascript">
+			
+			</script>
 	</form>
 </div>
