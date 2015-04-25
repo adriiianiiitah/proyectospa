@@ -1,7 +1,7 @@
 * {outline:none !important;}
 body {
   color:#525252;
-  background: white;
+  background:#353535;
 }
 .body-expanded, .modal-open {
   overflow-y:hidden;
@@ -81,8 +81,8 @@ a.show-sidebar:hover {
 #content {
   position: relative;
   z-index: 10;
-  /*
-  background: #FBFBF0;
+  background: white;
+  /*background: #FBFBF0;
   box-shadow: 0 0 6px #000;*/
   padding-bottom: 3000px !important;
   margin-bottom: -2980px !important;
@@ -413,7 +413,7 @@ a.show-sidebar:hover {
   padding: 0 15px;
 }
 .sidebar-show #content.col-xs-12 {
-  opacity: 1;
+  /*opacity: 1;*/
   width: 83.33333333333334%;
 }
 .expanded {
@@ -2163,7 +2163,7 @@ border-radius: 50%;}
     padding:0;
   }
   .sidebar-show #content.col-sm-10 {
-    opacity: 1;
+    /*opacity: 1;*/
     width:100%;
   }
   .page-404 .form-inline {
