@@ -836,6 +836,7 @@ ul.DTTT_dropdown.dropdown-menu > li:hover > a {
   background-color: #496A84;
   color: #f8f8f8;
   border-color: #315D80;
+  
 }
 .txt-primary {color: #496A84;}
 .progress-bar-success .ui-widget-header, .bg-success, .btn-success, .btn-success.disabled, .btn-success[disabled], fieldset[disabled] .btn-success, .btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover, .btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus, .btn-success.disabled:active, .btn-success[disabled]:active, fieldset[disabled] .btn-success:active, .btn-success.disabled.active, .btn-success[disabled].active, fieldset[disabled] .btn-success.active, .progress-bar-success,
