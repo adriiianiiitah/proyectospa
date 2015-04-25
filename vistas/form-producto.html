@@ -6,7 +6,7 @@
             </div>
 	    </div>
 		<div class="col-xs-12 col-sm-7">
-					<form class="form-horizontal" role="form" onsubmit="return esProductoCorrecto(this);" action="#" method="post">
+					<form id="form_producto" class="form-horizontal" role="form" onsubmit="return esProductoCorrecto(this);" action="#" method="post">
 
 						<fieldset>
 							<legend>Datos Generales</legend>
@@ -37,7 +37,7 @@
 							<div class="form-group">
 								<div class="col-xs-10 col-xs-offset-1 col-sm-6">
 									<button type="submit" class="btn btn-pink" >Guardar</button>
-									<button type="button" class="btn btn-pink" onclick="">Limpiar</button>
+									<button type="button" class="btn btn-pink" onclick="limpiarFormulario()">Limpiar</button>
 								</div>
 							</div>
 						</fieldset>

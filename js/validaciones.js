@@ -481,3 +481,7 @@ function habilitaFormulario() {
 		selects[j].readOnly = false;
 	}
 }
+
+function limpiarFormulario() {
+	document.getElementById('form_producto').reset();
+}
