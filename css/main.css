@@ -220,9 +220,11 @@ input[type="tel"] {
 }
 
 .thumbnail  .imagen-pedido {
-  height: 150px;
+  width: 100px;
+  height:auto;
   margin-top: 5px;
   margin-bottom: 5px;
+  display: inline;
 }
 
 .row {
@@ -386,6 +388,12 @@ footer p {
 .titulo {
   text-align: center;
   color: hotpink;
+}
+
+.titulo-pedido {
+  text-align: center;
+  color: hotpink;
+  font-size: 24px;
 }
 
 .navbar-default {
