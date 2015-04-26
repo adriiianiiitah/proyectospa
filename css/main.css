@@ -213,6 +213,12 @@ input[type="tel"] {
   height: 200px;
 }
 
+.thumbnail .imagen-usuario {
+  height: 200px;
+  margin: auto;
+  text-align: center;
+}
+
 .thumbnail  .imagen-carrito {
   height: 200px;
   margin-top: 10px;

@@ -7,6 +7,52 @@ function ocultar(elemento) {
 	bisabuelo.style.display = 'none';
 }
 
+function esUsuarioEmailTel(elemento) {
+	var padre = elemento.parentNode;
+	var nombre = elemento.value;
+	var abuelo = padre.parentNode;
+
+	if (nombre=="") {
+		abuelo.className = 'form-group has-error';
+		return false;
+	} else {
+		var expreg = /^(([A-Za-z0-9_-]{3,15})|([0-9]{3,4}-? ?.?[0-9]{3}-? ?.?[0-9]{3}) | ([_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3}))+$/;
+  
+	  if(expreg.test(nombre)) {
+		abuelo.className = 'form-group has-success';
+		return true;
+	  }
+	  else {
+	  	abuelo.className = 'form-group has-error';
+	  	return false;
+	  }
+	}
+}
+
+function esCodigo(elemento) {
+	var padre = elemento.parentNode;
+	var codigo = elemento.value;
+	
+	alert(elemento);
+
+	if(codigo=="") {
+		padre.className = 'form-group has-error';
+		return false;
+	} else {
+		var expreg = /^([1-9][0-9]{4})+$/;
+  
+	  if(expreg.test(codigo)) {
+		padre.className = 'form-group has-success';
+		return true;
+	  }
+	  else {
+	  	padre.className = 'form-group has-error';
+	  	return false;
+	  }
+	}
+}
+}
+
 function esProducto(elemento) {
 	var padre = elemento.parentNode;
 	var nombre = elemento.value;
