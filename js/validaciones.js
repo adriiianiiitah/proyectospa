@@ -29,6 +29,28 @@ function esProducto(elemento) {
 	}
 }
 
+function esServicio(elemento) {
+	var padre = elemento.parentNode;
+	var servicio = elemento.value;
+	var abuelo = padre.parentNode;
+
+	if (servicio=="") {
+		abuelo.className = 'form-group has-error';
+		return false;
+	} else {
+		var expreg = /^(([A-Za-záéíóúñ0-9]{2,})|([A-Za-záéíóúñ0-9]{2,}[\s][A-Za-záéíóúñ0-9]{2,}))+$/;
+  
+	  if(expreg.test(servicio)) {
+		abuelo.className = 'form-group has-success';
+		return true;
+	  }
+	  else {
+	  	abuelo.className = 'form-group has-error';
+	  	return false;
+	  }
+	}
+}
+
 function esDescripcion(elemento) {
 	var padre = elemento.parentNode;
 	var nombre = elemento.value;
@@ -408,6 +430,26 @@ function esProductoCorrecto(formulario) {
 	var es_correcto = true;
 
 	if(!esProducto(producto)) {
+		es_correcto = false;
+	}
+	if(!esDescripcion(descripcion)) {
+		es_correcto = false;
+	}
+	if(!esPrecio(precio)){
+		es_correcto = false;
+	}
+	return es_correcto;
+}
+
+function esServicioCorrecto(formulario) {
+	var id = document.getElementById('id_servicio');
+	var servicio = document.getElementById('servicio');
+	var descripcion = document.getElementById('descripcion');
+	var precio = document.getElementById('precio');
+
+	var es_correcto = true;
+
+	if(!esServicio(servicio)) {
 		es_correcto = false;
 	}
 	if(!esDescripcion(descripcion)) {
