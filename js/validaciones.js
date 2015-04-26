@@ -51,7 +51,6 @@ function esCodigo(elemento) {
 	  }
 	}
 }
-}
 
 function esProducto(elemento) {
 	var padre = elemento.parentNode;
