@@ -33,8 +33,6 @@ function esCodigo(elemento) {
 	var padre = elemento.parentNode;
 	var codigo = elemento.value;
 	
-	alert(elemento);
-
 	if(codigo=="") {
 		padre.className = 'form-group has-error';
 		return false;
