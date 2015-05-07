@@ -398,6 +398,17 @@ function agregarTelefono() {
 	numero_telefonos++;
 }
 
+function quitarTelefono(elemento) {
+	var padre = elemento.parentNode;
+	var abuelo = padre.parentNode;
+	var bisabuelo = abuelo.parentNode;
+
+	if(numero_telefonos > 1) {
+		bisabuelo.removeChild(abuelo);
+		numero_telefonos--;
+	}
+}
+
 function esUsuarioRegistrado() {
 	var usuario = document.getElementById('usuario-login');
 	return false;
@@ -557,13 +568,18 @@ function esRegistroCorrecto(formulario) {
 function habilitaFormulario() {
 	var inpus = document.getElementsByTagName('input');
 	var selects = document.getElementsByTagName('select');
+	var butttons = document.getElementsByTagName('button');
 
 	for(var i = 0; i < inpus.length; i++) {
 		inpus[i].readOnly = false;
 	}
 
 	for(var j = 0; j < selects.length; j++) {
-		selects[j].readOnly = false;
+		selects[j].disabled=false;
+	}
+
+	for(var k = 0; k < butttons.length; k++) {
+		butttons[k].disabled=false;
 	}
 }
 

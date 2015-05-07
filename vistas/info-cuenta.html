@@ -38,7 +38,12 @@
 								<input type="text" id="telefono" class="form-control" name="telefono" placeholder="" onblur="esTelefono(this)" required readonly/>
 							</div>
 							<div class="col-xs-2 col-sm-1">
-								<button type="button" class="btn" onclick="agregarTelefono()">+</button>
+								<button type="button" class="btn" onclick="agregarTelefono()" disabled="true">
+									<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+								</button>
+								<button type="button" class="btn" onclick="quitarTelefono(this)" disabled="true">
+									<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+								</button>
 							</div>
 						</div>
 
@@ -73,7 +78,7 @@
 						<div class="form-group">
 							<label for="municipio" class="col-xs-12 col-sm-3 col-md-3 control-label">Municipio:</label>
 							<div class="col-xs-12 col-sm-3 col-md-3 ">
-								<select id="municipio" class="selectpicker form-control" name="municipio" data-style="btn-info" readonly>
+								<select id="municipio" class="selectpicker form-control" name="municipio" data-style="btn-info" disabled="true">
 									<option value="guadalajara" selected="true">Guadalajara</option>
 								    <option value="tlaquepaque">Tlaquepaque</option>
 								    <option value="tonala">Tonalá</option>
@@ -82,7 +87,7 @@
 							</div>
 							<label for="municipio" class="col-xs-12 col-sm-3 col-md-2 control-label">Estado:</label>
 							<div class="col-xs-12 col-sm-3 col-md-3 ">
-								<select id="municipio" class="selectpicker form-control" name="municipio" readonly>
+								<select id="municipio" class="selectpicker form-control" name="municipio" disabled="true">
 									<option value="guadalajara" selected="true">Jalisco</option>
 							    <option value="tlaquepaque">Colima</option>
 							    <option value="tonala">Aguascalientes</option>
