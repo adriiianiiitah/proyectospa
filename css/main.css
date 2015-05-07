@@ -394,6 +394,11 @@ footer p {
 .titulo {
   text-align: center;
   color: hotpink;
+  height: 55px;
+}
+
+p.descripcion {
+  height: 40px;
 }
 
 .titulo-pedido {

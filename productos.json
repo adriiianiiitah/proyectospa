@@ -1,0 +1,57 @@
+[
+    {
+        "codigo": "1",
+        "categoria": "Anti-envejecimiento",
+        "producto": "Diamond Extreme 50ml",
+        "marca": "Natura Bissse",
+        "descripcion": "Crema anti-edad bio-regeneradora extremadamente rica",
+        "precio": 4850.00,
+        "imagen": "img/productos/diamond_extreme.png"
+        
+    },
+    {
+        "codigo": "2",
+        "categoria": "Proteciòn Solar",
+        "producto": "SPF 30 Daily Defense Oil Free Fluid 75ml",
+        "marca": "Natura Bissse",
+        "descripcion": "Protección solar anti-edad.",
+        "precio": 1375.00,
+        "imagen": "img/productos/daily_defense.png"
+    },
+    {
+        "codigo": "3",
+        "categoria": "Costmetologìa",
+        "producto": "The Cure Sheer Touch 150ml",
+        "marca": "Natura Bisssu",
+        "descripcion": "Gel luminoso con color y bronceado gradual.",
+        "precio": 1500.00,
+        "imagen": "img/productos/cure_sheer_touch.png"
+    },
+    {
+        "codigo": "4",
+        "categoria": "Anti-envejecimiento",
+        "producto": "The Cure Cream 50ml",
+        "marca": "Natura Bisssu",
+        "descripcion": "Crema hidro-reparadora detox.",
+        "precio": 2950.00,
+        "imagen": "img/productos/cure_cream.png"
+    },
+    {
+        "codigo": "5",
+        "categoria": "Alimentos",
+        "producto": "Nutrimeal Sabor Chocolate",
+        "marca": "Nutrimeal",
+        "descripcion": "Suplemento alimenticio.",
+        "precio": 480.00,
+        "imagen": "img/productos/nutrimeal.png"
+    },
+    {
+        "codigo": "6",
+        "categoria": "Anti-envejecimiento",
+        "producto": "Gel Anti Estrias",
+        "marca": "Daily Derm",
+        "descripcion": "Gel Anti Estrias",
+        "precio": 350.00,
+        "imagen": "img/productos/Gel Anti Estrias.png"
+    }
+]
