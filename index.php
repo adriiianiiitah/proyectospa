@@ -14,7 +14,8 @@
 			$control = new MasajeCtrl();
 			break;
 		case 'tratamiento':
-			# require_once('controls/tratamientoControl.php');
+			require_once('controls/tratamientoCtrl.php');
+			$control = new TratamientoCtrl();
 			break;
 		case 'aparatologia':
 			# require_once('controls/aparatologiaControl.php');

@@ -1,0 +1,61 @@
+[
+    {
+        "id_servicio": "1",
+        "categoria": "tratamientos-faciales",
+        "servicio": "Limpieza Profunda",
+        "descripcion": "Adecuada para todo tipo de piel, elimina impurezas, células muertas y puntos negros, además regula la secreción de grasa, la hidratación y oxigenación de la piel.",
+        "precio": 480.00,
+        "duracion": 60,
+        "imagen": "img/tratamientos/limpieza_profunda.png"
+    },
+
+    {
+        "id_servicio": "2",
+        "categoria": "tratamientos-faciales",
+        "servicio": "Hidratación Profunda",
+        "descripcion": "Aporta elementos naturales altamente hidratantes que recobran el grado de humedad a la piel previniendo así el envejecimiento prematuro, sensibilidad y aspecto desvitalizado.",
+        "precio": 720.00,
+        "duracion": 30,
+        "imagen": "img/tratamientos/hidratacion_profunda.png"
+    },
+
+    {
+        "id_servicio": "3",
+        "categoria": "tratamientos-faciales",
+        "servicio": "Control de Acné",
+        "descripcion": "Tratamiento para pieles grasas, seborreicas o con acné; repara lso tejidos, ejerce una acción hidratante y reguladora de la secreción sebácea.",
+        "precio": 350.00,
+        "duracion": 45,
+        "imagen": "img/tratamientos/control_acne.png"
+    },
+
+    {
+        "id_servicio": "4",
+        "categoria": "tratamientos-faciales",
+        "servicio": "Lifting Anti-edad",
+        "descripcion": "La combinación de hidratación, nutrición y reafirmación lograrán estimular las funciones naturales de la piel, regenerando las fibras de colágeno y elastina, mejorando la tonicidad y firmeza de la piel.",
+        "precio": 1260.00,
+        "duracion": 30,
+        "imagen": "img/tratamientos/lifting.png"
+    },
+
+    {
+        "id_servicio": "5",
+        "categoria": "tratamientos",
+        "servicio": "Peeling",
+        "descripcion": "Tratamiento recomendado para pieles con secuela de acné, cicatrices, poro dilatad, manchas, líneas de expresión acentuadas e imperfecciones ocasionadas con el paso del tiempo.",
+        "precio": 750.00,
+        "duracion": 100,
+        "imagen": "img/tratamientos/peeling.png"
+    },
+
+    {
+        "id_servicio": "6",
+        "categoria": "tratamientos",
+        "servicio": "Anticelulítico",
+        "descripcion": "Tratamiento capaz de remover nódulos celulíticos y adiposos que ocasionan el aumento de centímetros y deformación del tejido en zonas de glúteos, cadera y muslos.",
+        "precio": 1750.00,
+        "duracion": 120,
+        "imagen": "img/tratamientos/anticelulitico.png"
+    }
+]
