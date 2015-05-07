@@ -2,12 +2,16 @@
 	$control = $_GET['ctrl'];
 
 	switch ($control) {
+		case '':
+		case 'inicio':
+			break;
 		case 'producto':
 			require_once('controls/productoCtrl.php');
 			$control = new ProductoCtrl();
 			break;
 		case 'masaje':
-			# require_once('controls/masajeControl.php');
+			require_once('controls/masajeCtrl.php');
+			$control = new MasajeCtrl();
 			break;
 		case 'tratamiento':
 			# require_once('controls/tratamientoControl.php');

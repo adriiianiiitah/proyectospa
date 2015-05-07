@@ -1,13 +1,13 @@
 <?php
 	require_once('estandarCtrl.php');
 
-	class ProductoCtrl extends estandarCtrl {
+	class MasajeCtrl extends estandarCtrl {
 		private $model;
 
 		function __construct() {
 			parent::__construct();
-			require_once('./models/productoMdl.php');
-			$this->model = new ProductoMdl();
+			require_once('./models/masajeMdl.php');
+			$this->model = new MasajeMdl();
 		}
 
 		public function ejecutar() {
@@ -16,11 +16,10 @@
 			switch ($accion) {
 				case 'agregar':
 					if(empty($_POST)) {
-						require_once('./views/agregarProducto.html');
+						require_once('./views/agregarMasaje.html');
 					} else {
 						$this -> agregar();
 					}
-					
 					break;
 				case 'modificar_uno':
 					#$this -> modificar();
@@ -42,18 +41,7 @@
 		}
 		
 		function agregar() {
-			$imagen = $_POST['imagen'];
-			$producto = $_POST['producto'];
-			$id_producto = $_POST['id_producto'];
-			$descripcion = $_POST['descripcion'];
-			$precio = $_POST['precio'];
-
-			$resultado = $this -> model -> agregar($imagen, $producto, $id_producto, $descripcion, $precio);
 			
-		}
-
-		function esProductoValido() {
-
 		}
 
 		function listar() {
@@ -62,7 +50,7 @@
 			//var_dump($resultado);
 
 			$encabezado = file_get_contents("views/navegacion.html");
-			$vista = file_get_contents("views/productos.html");
+			$vista = file_get_contents("views/masajes.html");
 			$pie = file_get_contents("views/pie.html");
 
 			$inicio = strrpos($vista,'<!-- empieza -->');
@@ -71,16 +59,16 @@
 			$tarjeta = substr($vista,$inicio,$final-$inicio);
 
 			$lista = '';
-			foreach ($resultado as $producto) {
+			foreach ($resultado as $masaje) {
 
 			    $tarjetita = $tarjeta;
 
 			    $diccionario = array(
-					'{producto}' => $producto['producto'], 
-					'{descripcion}' => $producto['descripcion'],
-					'{precio}' => $producto['precio'], 
-					'{imagen}' => $producto['imagen'],
-					'{enlace}' => "?ctrl=producto&act=consultar&id=".$producto['codigo']
+					'{masaje}' => $masaje['servicio'], 
+					'{descripcion}' => $masaje['descripcion'],
+					'{precio}' => $masaje['precio'], 
+					'{imagen}' => $masaje['imagen'],
+					'{enlace}' => "?ctrl=masaje&act=consultar&id=".$masaje['id_servicio']
 				);
 
 				$tarjetita = strtr($tarjeta,$diccionario);
@@ -98,7 +86,7 @@
 				if (($this->esEntero($id))) {//is_int((int)$id)) { 
 
 					$encabezado = file_get_contents("views/navegacion.html");
-					$vista = file_get_contents("views/ver-producto.html");
+					$vista = file_get_contents("views/ver-masaje.html");
 					$pie = file_get_contents("views/pie.html");
 
 					$inicio = strrpos($vista,'<!-- empieza -->');
@@ -106,14 +94,15 @@
 
 					$pagina = substr($vista,$inicio,$final-$inicio);
 
-					$producto = $this -> model -> consutar($id);
+					$servicio = $this -> model -> consutar($id);
 
 					$datos = $pagina;
 					$diccionario = array(
-						'{producto}' => $producto['producto'], 
-						'{descripcion}' => $producto['descripcion'],
-						'{precio}' => $producto['precio'], 
-						'{imagen}' => $producto['imagen']
+						'{masaje}' => $masaje['servicio'], 
+						'{descripcion}' => $masaje['descripcion'],
+						'{precio}' => $masaje['precio'], 
+						'{imagen}' => $masaje['imagen'],
+						'{duracion}' => $masaje['duracion']
 					);
 
 					$datos = strtr($pagina,$diccionario);

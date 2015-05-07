@@ -1,0 +1,51 @@
+[
+    {
+        "id_servicio": "1",
+        "categoria": "masajes",
+        "servicio": "Masaje de espalda",
+        "descripcion": "Es un masaje para aquellas personas que sufren de tensión, estrés, dolro muscular en cuello y espalda alta y baja.",
+        "precio": 4850.00,
+        "duracion": 60,
+        "imagen": "img/masajes/masaje-espalda.png"
+    },
+
+    {
+        "id_servicio": "2",
+        "categoria": "masajes",
+        "servicio": "Masaje Sueco",
+        "descripcion": "Relaja la tensión musuclar del cuerpo, estimula la circulación sanguínea y linfática liberando el estrés y actuando sobre el sistema nervioso.",
+        "precio": 7320.00,
+        "duracion": 60,
+        "imagen": "img/masajes/masaje-sueco.png"
+    },
+
+    {
+        "id_servicio": "3",
+        "categoria": "masajes",
+        "servicio": "Masaje Holístico",
+        "descripcion": "Extraordinario masaje terapéutico-relajante que elimina la tensión muscular, mejora la circulación, libera el estrés generando una grata sensación de descanso y bienestar en todo el cuerpo.",
+        "precio": 3050.00,
+        "duracion": 60,
+        "imagen": "img/masajes/masaje-holistico.png"
+    },
+
+    {
+        "id_servicio": "4",
+        "categoria": "masajes",
+        "servicio": "Masaje Aromaterapia",
+        "descripcion": "Excelente elección que genera un completo estado de bienestar y relajación gracias a los aceites esenciales, técnicas de masaje profundo y acupresión, además de terapia con toallas calientes.",
+        "precio": 1560.00,
+        "duracion": 30,
+        "imagen": "img/masajes/masaje-aromaterapia.png"
+    },
+
+    {
+        "id_servicio": "5",
+        "categoria": "masajes",
+        "servicio": "Masaje de Piedras Calientes",
+        "descripcion": "Gran relajante, desintoxicante, descontracturante y energizante masaje con piedras calientes, Activa el sistema articular, circulatorio y linfático, relaja el sistema nervioso y revitaliza todo el cuerpo consiguiendo un completo descanso físico y emocional.",
+        "precio": 6750.00,
+        "duracion": 60,
+        "imagen": "img/masajes/masaje-piedras.jpg"
+    }
+]
