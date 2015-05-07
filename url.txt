@@ -12,6 +12,9 @@ http://localhost/Proyecto-Spa/?ctrl=tratamiento&act=consultar&id=1
 http://localhost/Proyecto-Spa/?ctrl=estetica&act=consultar&id=3
 
 
+http://localhost/Proyecto-Spa/?ctrl=inicio&act=
+
+
 <ul class="dropdown-menu">
 						<li><a class="ajax-link" href="#">Nuevo</a></li>
 						<li><a class="ajax-link" href="#">Modificar</a></li>
