@@ -23,7 +23,7 @@
 			$resultado = array();
 
 			foreach ($json_ as $servicio) {
-				var_dump($servicio);
+				//var_dump($servicio);
 				//echo "<br>";
 				//echo "<br>";
 				if($servicio['id_servicio'] == $id) {

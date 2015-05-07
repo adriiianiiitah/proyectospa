@@ -1,20 +1,21 @@
 <div class="container">
 	<div class="row">
+		<!-- empieza -->
 		<div class="col-xs-12 col-sm-5">
-			<h1 class="titulo">Masaje de espalda</h1>
+			<h1 class="titulo">{masaje}</h1>
 			<div class="thumbnail">
-				<img src="../img/masajes/masaje-espalda.png" class=""/>
+				<img src="{imagen}" class=""/>
 			</div>
 		</div>
 
 		<div class="col-xs-12 col-sm-7">
 			<div class="">
 				<div class="duracion-masaje">
-					<span class="duracion"><i class="fa fa-clock-o"></i> Duración : 60 min</span>
+					<span class="duracion"><i class="fa fa-clock-o"></i> Duración : {duracion} min</span>
 				</div>
 				<div class="caption descripcion-masaje">
 					<p class="descripcion">
-						Es un masaje para aquellas personas que sufren de tensión, estrés, dolro muscular en cuello y espalda alta y baja.
+						{descripcion}
 					</p>
 				</div>
 				
@@ -47,9 +48,10 @@
 	</div>
 	<div class="row">
 		<div class="precio-masaje">
-			<span class="precio-reserva">Precio : $4,850.00 MXN</span>
+			<span class="precio-reserva">Precio : ${precio} MXN</span>
 			<hr/>
 			<a href="#" class="btn btn-pink btn-lg" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Agregar al carrito</a>
 		</div>
+		<!-- termina -->
 	</div>
 </div>

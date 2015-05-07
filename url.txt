@@ -1,0 +1,20 @@
+http://localhost/mvc/?ctrl=producto&act=agregar#
+
+http://localhost/mvc/?ctrl=producto&act=listar
+
+http://localhost/mvc/?ctrl=producto&act=consultar&id=1
+
+http://localhost/Proyecto-Spa/?ctrl=masaje&act=listar
+http://localhost/Proyecto-Spa/?ctrl=masaje&act=consultar&id=3
+
+
+<ul class="dropdown-menu">
+						<li><a class="ajax-link" href="#">Nuevo</a></li>
+						<li><a class="ajax-link" href="#">Modificar</a></li>
+						<li><a class="ajax-link" href="#">Consultas</a></li>
+						<li><a class="ajax-link" href="#">Eliminar</a></li>
+					</ul>
+
+bennymc
+
+yuukohl

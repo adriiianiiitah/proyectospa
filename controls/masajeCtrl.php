@@ -94,7 +94,9 @@
 
 					$pagina = substr($vista,$inicio,$final-$inicio);
 
-					$servicio = $this -> model -> consutar($id);
+					$masaje = $this -> model -> consutar($id);
+
+					//var_dump($masaje);
 
 					$datos = $pagina;
 					$diccionario = array(
