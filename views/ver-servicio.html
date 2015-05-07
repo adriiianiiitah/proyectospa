@@ -1,24 +1,26 @@
 <div class="container">
 	<div class="row">
+		<!-- empieza -->
 		<div class="col-xs-12 col-sm-5">
-			<h1 class="titulo">Manicure</h1>
+			<h1 class="titulo">{servicio}</h1>
 			<div class="thumbnail">
-				<img src="../img/estetica/manicure.jpg" class="imagen-masaje"/>
+				<img src="{imagen}" class="imagen-masaje"/>
 			</div>
 		</div>
 
 		<div class="col-xs-12 col-sm-7">
 			<div class="">
 				<div class="duracion-masaje">
-					<span class="duracion"><i class="fa fa-clock-o"></i> Duración : 60 min</span>
+					<span class="duracion"><i class="fa fa-clock-o"></i> Duración : {duracion} min</span>
 				</div>
 				<div class="caption descripcion-masaje">
 					<p class="descripcion">
-						Delicioso y profundo tratamiento para tus manos que regenera  y aclara la piel. Consiste en remoción profunda de cutículas, recorte y cuadratura de las uñas, exfoliación profunda de la piel, mascarilla hidratante para la piel, masaje profundo de manos y antebrazos y finaliza con un esmaltado completo o francés en cualquier tono.
+						{descripcion}
 					</p>
 				</div>
 			</div>
 		</div>
+
 	</div>
 	<div class="row">
 
@@ -41,13 +43,12 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="row">
 		<div class="precio-masaje">
-			<span class="precio-reserva">Precio : $350.00 MXN</span>
+			<span class="precio-reserva">Precio : ${precio} MXN</span>
 			<hr/>
 			<a href="../php/carrito.php" class="btn btn-pink btn-lg" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Agregar al carrito</a>
 		</div>
+		<!-- termina -->
 	</div>
-
 </div>

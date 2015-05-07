@@ -20,8 +20,9 @@
 		case 'aparatologia':
 			# require_once('controls/aparatologiaControl.php');
 			break;
-		case 'servicio':
-			# require_once('controls/servicioControl.php');
+		case 'estetica':
+			require_once('controls/servicioCtrl.php');
+			$control = new ServicioCtrl();
 			break;/*
 		case 'producto':
 			require_once('controls/productoCtrl.php');

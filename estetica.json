@@ -1,0 +1,51 @@
+[
+    {
+        "id_servicio": "1",
+        "categoria": "estetica",
+        "servicio": "Manicure",
+        "descripcion": "Delicioso y profundo tratamiento para tus manos que regenera y aclara la piel. Consiste en remoción profunda de cutículas, recorte y cuadratura de las uñas, exfoliación profunda de la piel, mascarilla hidratante para la piel, masaje profundo de manos y antebrazos y finaliza con un esmaltado completo o francés en cualquier tono.",
+        "precio": 350.00,
+        "duracion": 30,
+        "imagen": "img/estetica/manicure.jpg"
+    },
+
+    {
+        "id_servicio": "2",
+        "categoria": "estetica",
+        "servicio": "Manicure básico",
+        "descripcion": "Rápido y eficaz servicio de belleza para tus cutículas y uñas. Consiste en remoción profunda de cutículas, recorte y cuadratura de uñas, finalizando con un terminado natural con Top Coat.",
+        "precio": 180.00,
+        "duracion": 30,
+        "imagen": "img/estetica/manicure_basico.jpg"
+    },
+
+    {
+        "id_servicio": "3",
+        "categoria": "estetica",
+        "servicio": "Pedicure",
+        "descripcion": "Una experiencia completa de belleza y bienestar para tus pies. Servicio profundo de pedicure que incluye, baño de pies en agua tibia, remoción profunda de cutícula y áreas callosas y recorte y cuadratura de uñas. Exfoliación profunda que revela una piel más luminosa y suave. Mascarilla nutritiva que aporta aminoácidos a la piel. Masaje en pies y pantorrilla con loción hidratante para sellar la mascarilla. Finaliza con esmaltado completo o francés en cualquier color.",
+        "precio": 560.00,
+        "duracion": 45,
+        "imagen": "img/estetica/pedicure.jpg"
+    },
+
+    {
+        "id_servicio": "4",
+        "categoria": "estetica",
+        "servicio": "Pedicure básico",
+        "descripcion": "Servicio profundo de pedicure que incluye, baño de pies en agua tibia, remoción profunda de cutícula y áreas callosas, recorte y cuadratura de uñas para dar al final un terminado natural con Top Coat.",
+        "precio": 370.00,
+        "duracion": 30,
+        "imagen": "img/estetica/pedicure_basico.jpg"
+    },
+
+    {
+        "id_servicio": "5",
+        "categoria": "estetica",
+        "servicio": "Uñas",
+        "descripcion": "Uñas de gel.",
+        "precio": 250.00,
+        "duracion": 60,
+        "imagen": "img/estetica/uñas.jpg"
+    }
+]

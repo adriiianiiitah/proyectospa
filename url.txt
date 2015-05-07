@@ -1,11 +1,15 @@
 http://localhost/mvc/?ctrl=producto&act=agregar#
 
-http://localhost/mvc/?ctrl=producto&act=listar
+http://localhost/Proyecto-Spa/?ctrl=producto&act=listar
+http://localhost/Proyecto-Spa/?ctrl=producto&act=consultar&id=1
 
-http://localhost/mvc/?ctrl=producto&act=consultar&id=1
 
 http://localhost/Proyecto-Spa/?ctrl=masaje&act=listar
-http://localhost/Proyecto-Spa/?ctrl=masaje&act=consultar&id=3
+http://localhost/Proyecto-Spa/?ctrl=masaje&act=consultar&id=1
+
+http://localhost/Proyecto-Spa/?ctrl=tratamiento&act=consultar&id=1
+
+http://localhost/Proyecto-Spa/?ctrl=estetica&act=consultar&id=3
 
 
 <ul class="dropdown-menu">
@@ -14,7 +18,3 @@ http://localhost/Proyecto-Spa/?ctrl=masaje&act=consultar&id=3
 						<li><a class="ajax-link" href="#">Consultas</a></li>
 						<li><a class="ajax-link" href="#">Eliminar</a></li>
 					</ul>
-
-bennymc
-
-yuukohl
