@@ -1,0 +1,44 @@
+[
+    {
+        "id_servicio": "1",
+        "area": "Bigote" ,
+        "precio-paquete": 1075.00,
+        "precio-descuento": 914.00,
+        "precio-sesion": 188.00
+    },
+    {
+        "id_servicio": "2",
+        "area": "Axilas" ,
+        "precio-paquete": 1478.00,
+        "precio-descuento": 1256.00,
+        "precio-sesion": 259.00
+    },
+    {
+        "id_servicio": "3",
+        "area": "Bikini" ,
+        "precio-paquete": 1675.00,
+        "precio-descuento": 1314.00,
+        "precio-sesion": 256.00
+    },
+    {
+        "id_servicio": "4",
+        "area": "1/2 piernas" ,
+        "precio-paquete": 5853.00,
+        "precio-descuento": 4975.00,
+        "precio-sesion": 1024.00
+    },
+    {
+        "id_servicio": "5",
+        "area": "Piernas completas",
+        "precio-paquete": 8340.00,
+        "precio-descuento": 7089.00,
+        "precio-sesion": 1339.00
+    },
+    {
+        "id_servicio": "6",
+        "area": "Coxis" ,
+        "precio-paquete": 2890.00,
+        "precio-descuento": 2457.00,
+        "precio-sesion": 506.00
+    }
+]

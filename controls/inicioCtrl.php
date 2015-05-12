@@ -22,6 +22,8 @@
 						http_response_code(404);
 						break;
 				}
+			} else {
+				$this -> mostrar();
 			}
 		}
 
