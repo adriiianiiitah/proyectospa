@@ -1,107 +1,138 @@
 	
-	<div class="container">
-			<form class="form-horizontal" role="form" onsubmit="return esRegistroCorrecto(this);" action="../php/panel.php">
+<div class="container container-margen-top">
+	<form class="form-horizontal" role="form" onsubmit="return esRegistroCorrecto(this);" action="?ctrl=usuario&act=panel">
 
-				<fieldset>
-					<legend>Datos Generales</legend>
-					<div class="form-group">
-						<label for="nombre" class="col-xs-12 col-sm-3 control-label">Nombre:</label>
-						<div class="col-xs-12 col-sm-6">
-							<input type="text" id="nombre" class="form-control" name="nombre" placeholder="" onblur="esNombre(this)" required/>
-						</div>
-					</div>
+		<fieldset>
+			<legend>Foto de perfil</legend>
+			<div class="col-xs-8 col-sm-6 col-xs-offset-2 col-sm-offset-3">
+				<input id="file-4" type="file" class="file"  data-upload-url="#" name="foto" id="foto">
+			</div>
+		</fieldset>
 
-					<div class="form-group">
-						<label for="apellidos" class="col-xs-12 col-sm-3 control-label">Apellidos:</label>
-						<div class="col-xs-12 col-sm-6">
-							<input type="text" id="apellidos" class="form-control" name="apellidos" placeholder="" onblur="esApellido(this)" required/>
-						</div>
-					</div>
+		<fieldset>
+			<legend>Datos Generales</legend>
+			<div class="form-group">
+				<label for="nombre" class="col-xs-12 col-sm-3 control-label">Nombre:</label>
+				<div class="col-xs-12 col-sm-6">
+					<input type="text" id="nombre" class="form-control" name="nombre" placeholder="" onblur="esNombre(this)" required/>
+				</div>
+			</div>
 
-					<div class="form-group">
-						<label for="usuario" class="col-xs-12 col-sm-3 control-label">Usuario:</label>
-						<div class="col-xs-12 col-sm-6">
-							<input type="text" id="usuario" class="form-control" name="usuario" placeholder="" onblur="esUsuario(this)" required/>
-						</div>
-					</div>
+			<div class="form-group">
+				<label for="apellidos" class="col-xs-12 col-sm-3 control-label">Apellidos:</label>
+				<div class="col-xs-12 col-sm-6">
+					<input type="text" id="apellidos" class="form-control" name="apellidos" placeholder="" onblur="esApellido(this)" required/>
+				</div>
+			</div>
 
-					<div class="form-group">
-						<label for="correo" class="col-xs-12 col-sm-3 control-label">Correo:</label>
-						<div class="col-xs-12 col-sm-6">
-							<input type="email" id="correo" class="form-control" name="email" placeholder="" onblur="esEmail(this)" required/>
-						</div>
-					</div>
+			<div class="form-group">
+				<label for="usuario" class="col-xs-12 col-sm-3 control-label">Usuario:</label>
+				<div class="col-xs-12 col-sm-6">
+					<input type="text" id="usuario" class="form-control" name="usuario" placeholder="" onblur="esUsuario(this)" required/>
+				</div>
+			</div>
 
-					<div class="form-group" id="div-telefono">
-						<label for="telefono" class="col-xs-12 col-sm-3 control-label">Teléfono:</label>
-						<div class="col-xs-10 col-sm-5">
-							<input type="text" id="telefono" class="form-control" name="telefono" placeholder="" onblur="esTelefono(this)" required/>
-						</div>
-						<div class="col-xs-2 col-sm-1">
-							<button type="button" class="btn" onclick="agregarTelefono()">+</button>
-						</div>
-					</div>
+			<div class="form-group">
+				<label for="correo" class="col-xs-12 col-sm-3 control-label">Correo:</label>
+				<div class="col-xs-12 col-sm-6">
+					<input type="email" id="correo" class="form-control" name="email" placeholder="" onblur="esEmail(this)" required/>
+				</div>
+			</div>
 
-					<div class="form-group" id="div-contrasenas">
-						<label for="contrasena1" class="col-xs-12 col-sm-3 col-md-3 control-label">Contraseña:</label>
-						<div class="col-xs-12 col-sm-3 col-md-3 ">
-							<input type="password" id="contrasena1" class="form-control" name="contrasena" placeholder="" onblur="esContrasena(this)" required/>
-						</div>
-						<label for="contrasena2" class="col-xs-12 col-sm-3 col-md-2 control-label">Repetir contraseña:</label>
-						<div class="col-xs-12 col-sm-3 col-md-3">
-							<input type="password" id="contrasena2" class="form-control" name="contrasena2" placeholder="" onblur="esContrasena(this); coinciden(this)" required/>
-						</div>
-					</div>
-				</fieldset>
+			<div class="form-group" id="div-telefono">
+				<label for="telefono" class="col-xs-12 col-sm-3 control-label">Teléfono:</label>
+				<div class="col-xs-10 col-sm-5">
+					<input type="text" id="telefono" class="form-control" name="telefono" placeholder="" onblur="esTelefono(this)" required/>
+				</div>
+				<div class="col-xs-2 col-sm-1">
+					<button type="button" class="btn" onclick="agregarTelefono()">+</button>
+				</div>
+			</div>
 
-				<fieldset>
-					<legend>Datos de Ubicación</legend>
-					<div class="form-group">
-						<label for="domicio" class="col-xs-12 col-sm-3 control-label">Domicio:</label>
-						<div class="col-xs-12 col-sm-6">
-							<input type="text" id="domicilio" class="form-control" name="domicio" placeholder="" onblur="esDomicilio(this)" required/>
-						</div>
-					</div>
+			<div class="form-group" id="div-contrasenas">
+				<label for="contrasena1" class="col-xs-12 col-sm-3 col-md-3 control-label">Contraseña:</label>
+				<div class="col-xs-12 col-sm-3 col-md-3 ">
+					<input type="password" id="contrasena1" class="form-control" name="contrasena" placeholder="" onblur="esContrasena(this)" required/>
+				</div>
+				<label for="contrasena2" class="col-xs-12 col-sm-3 col-md-2 control-label">Repetir contraseña:</label>
+				<div class="col-xs-12 col-sm-3 col-md-3">
+					<input type="password" id="contrasena2" class="form-control" name="contrasena2" placeholder="" onblur="esContrasena(this); coinciden(this)" required/>
+				</div>
+			</div>
+		</fieldset>
 
-					<div class="form-group">
-						<label for="colonia" class="col-xs-12 col-sm-3 control-label">Colonia:</label>
-						<div class="col-xs-12 col-sm-6">
-							<input type="text" id="colonia" class="form-control" name="colonia" placeholder="" onblur="esColonia(this)" required/>
-						</div>
-					</div>
+		<fieldset>
+			<legend>Datos de Ubicación</legend>
+			<div class="form-group">
+				<label for="domicio" class="col-xs-12 col-sm-3 control-label">Domicio:</label>
+				<div class="col-xs-12 col-sm-6">
+					<input type="text" id="domicilio" class="form-control" name="domicio" placeholder="" onblur="esDomicilio(this)" required/>
+				</div>
+			</div>
 
-					<div class="form-group">
-						<label for="municipio" class="col-xs-12 col-sm-3 col-md-3 control-label">Municipio:</label>
-						<div class="col-xs-12 col-sm-3 col-md-3 ">
-							<select id="municipio" class="selectpicker form-control" name="municipio" data-style="btn-info">
-								<option value="guadalajara" selected="true">Guadalajara</option>
-							    <option value="tlaquepaque">Tlaquepaque</option>
-							    <option value="tonala">Tonalá</option>
-							    <option value="zapopan">Zapopan</option>
-							</select>
-						</div>
-						<label for="municipio" class="col-xs-12 col-sm-3 col-md-2 control-label">Estado:</label>
-						<div class="col-xs-12 col-sm-3 col-md-3 ">
-							<select id="municipio" class="selectpicker form-control" name="municipio">
-								<option value="guadalajara" selected="true">Jalisco</option>
-						    <option value="tlaquepaque">Colima</option>
-						    <option value="tonala">Aguascalientes</option>
-							</select>
-						</div>
-					</div>
+			<div class="form-group">
+				<label for="colonia" class="col-xs-12 col-sm-3 control-label">Colonia:</label>
+				<div class="col-xs-12 col-sm-6">
+					<input type="text" id="colonia" class="form-control" name="colonia" placeholder="" onblur="esColonia(this)" required/>
+				</div>
+			</div>
 
-					<div class="form-group">
-						<label for="codigo_postal" class="col-xs-12 col-sm-3 col-md-3 control-label">Código Postal:</label>
-						<div class="col-xs-12 col-sm-3 col-md-3 ">
-							<input type="number" id="codigo_postal" class="form-control" name="codigo_postal" placeholder="" step="1" min="10000" max="99999" onblur="esCodigoPostal(this)" required/>
-						</div>
-					</div>
-				</fieldset>
+			<div class="form-group">
+				<label for="municipio" class="col-xs-12 col-sm-3 col-md-3 control-label">Municipio:</label>
+				<div class="col-xs-12 col-sm-3 col-md-3 ">
+					<select id="municipio" class="selectpicker form-control" name="municipio" data-style="btn-info">
+						<option value="guadalajara" selected="true">Guadalajara</option>
+					    <option value="tlaquepaque">Tlaquepaque</option>
+					    <option value="tonala">Tonalá</option>
+					    <option value="zapopan">Zapopan</option>
+					</select>
+				</div>
+				<label for="municipio" class="col-xs-12 col-sm-3 col-md-2 control-label">Estado:</label>
+				<div class="col-xs-12 col-sm-3 col-md-3 ">
+					<select id="municipio" class="selectpicker form-control" name="municipio">
+						<option value="guadalajara" selected="true">Jalisco</option>
+				    <option value="tlaquepaque">Colima</option>
+				    <option value="tonala">Aguascalientes</option>
+					</select>
+				</div>
+			</div>
 
-					<div class="form-group">
-						<div class="col-xs-12 col-sm-3 col-md-3 ">
-							<button type="submit" class="btn btn-pink"> Registrarse</button>
-						</div>
-					</div>
-			</form>
-		</div>
+			<div class="form-group">
+				<label for="codigo_postal" class="col-xs-12 col-sm-3 col-md-3 control-label">Código Postal:</label>
+				<div class="col-xs-12 col-sm-3 col-md-3 ">
+					<input type="number" id="codigo_postal" class="form-control" name="codigo_postal" placeholder="" step="1" min="10000" max="99999" onblur="esCodigoPostal(this)" required/>
+				</div>
+			</div>
+		</fieldset>
+
+			<div class="form-group">
+				<div class="col-xs-12 col-sm-3 col-md-3 ">
+					<button type="submit" class="btn btn-pink"> Registrarse</button>
+				</div>
+			</div>
+	</form>
+</div>
+<script>
+	$("#file-4").fileinput({
+		uploadExtraData: [
+            {kvId: '10'}
+        ],
+	});
+    $(".btn-warning").on('click', function() {
+        if ($('#file-4').attr('disabled')) {
+            $('#file-4').fileinput('enable');
+        } else {
+            $('#file-4').fileinput('disable');
+        }
+    });    
+    $(".btn-info").on('click', function() {
+        $('#file-4').fileinput('refresh', {previewClass:'bg-info'});
+    });
+    $(document).ready(function() {
+        $("#test-upload").fileinput({
+            'showPreview' : false,
+            'allowedFileExtensions' : ['jpg', 'png','gif'],
+            'elErrorContainer': '#errorBlock'
+        });
+    });
+</script>

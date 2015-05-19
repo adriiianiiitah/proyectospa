@@ -16,7 +16,6 @@
 			switch ($accion) {
 				case 'registro':
 					if(empty($_POST)) {
-						//require_once('./views/registroProducto.html');
 						$this -> mostrarVistaFormRegistro();
 					} else {
 						$this -> agregar();
@@ -55,8 +54,11 @@
 			
 		}
 
-		function consultar() {
-		
+		function mostrarPanel() {
+			$encabezado = file_get_contents("views/navegacion-panel.html");
+			$vista = file_get_contents("views/panel-usuario.html");
+
+			echo $encabezado.$vista;
 		}
 
 		function confirmarCambioContrasenia() {
@@ -68,7 +70,7 @@
 		}
 
 		function mostrarVistaFormRegistro() {
-    		$encabezado = file_get_contents("views/navegacion.html");
+    		$encabezado = file_get_contents("views/navegacion-panel.html");
 			$vista = file_get_contents("views/registro.html");
 			$pie = file_get_contents("views/pie.html");
 

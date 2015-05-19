@@ -361,6 +361,10 @@ footer p {
   border-radius: 7px;
 }
 
+.container-margen-top {
+  margin-top: 60px;
+}
+
 .form-control {/*
   color: #555;
   background-color: #fff;
