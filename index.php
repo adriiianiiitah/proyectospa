@@ -27,11 +27,11 @@
 			case 'estetica':
 				require_once('controls/servicioCtrl.php');
 				$control = new ServicioCtrl();
-				break;/*
-			case 'producto':
-				require_once('controls/productoCtrl.php');
-				$control = new ProductoCtrl();
-				break;*/
+				break;
+			case 'usuario':
+				require_once('controls/usuarioCtrl.php');
+				$control = new UsuarioCtrl();
+				break;
 			case 'contacto':
 				require_once('controls/contactoCtrl.php');
 				$control = new ContactoCtrl();

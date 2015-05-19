@@ -1,26 +1,26 @@
 <?php
 	require_once('estandarCtrl.php');
 
-	class ProductoCtrl extends estandarCtrl {
+	class UsuarioCtrl extends estandarCtrl {
 		private $model;
 
 		function __construct() {
 			parent::__construct();
-			require_once('./models/productoMdl.php');
-			$this->model = new ProductoMdl();
+			require_once('./models/usuarioMdl.php');
+			$this->model = new UsuarioMdl();
 		}
 
 		public function ejecutar() {
 			$accion = $_GET['act'];
 
 			switch ($accion) {
-				case 'agregar':
+				case 'registro':
 					if(empty($_POST)) {
-						require_once('./views/agregarProducto.html');
+						//require_once('./views/registroProducto.html');
+						$this -> mostrarVistaFormRegistro();
 					} else {
 						$this -> agregar();
 					}
-					
 					break;
 				case 'modificar_uno':
 					#$this -> modificar();
@@ -56,44 +56,10 @@
 
 		}
 
-		function listar() {
-			$resultado = $this -> model -> listar(); 
-
-			//var_dump($resultado);
-
-			$encabezado = file_get_contents("views/navegacion.html");
-			$vista = file_get_contents("views/productos.html");
-			$pie = file_get_contents("views/pie.html");
-
-			$inicio = strrpos($vista,'<!-- empieza -->');
-			$final = strrpos($vista,'<!-- termina -->') + 17;
-
-			$tarjeta = substr($vista,$inicio,$final-$inicio);
-
-			$lista = '';
-			foreach ($resultado as $producto) {
-
-			    $tarjetita = $tarjeta;
-
-			    $diccionario = array(
-					'{producto}' => $producto['producto'], 
-					'{descripcion}' => $producto['descripcion'],
-					'{precio}' => $producto['precio'], 
-					'{imagen}' => $producto['imagen'],
-					'{enlace}' => "?ctrl=producto&act=consultar&id=".$producto['codigo']
-				);
-
-				$tarjetita = strtr($tarjeta,$diccionario);
-				$lista .= $tarjetita;
-			}
-
-			$vista = str_replace($tarjeta, $lista, $vista);
-			echo $encabezado.$vista.$pie;
-		}
-
 		function consultar() {
-			if (isset($_GET['id']) && !empty($_GET['id'])) {
-				$id = $_GET['id'];
+			if (isset($_GET['usuario']) && !empty($_GET['contrasena'])) {
+				$usuario = $_GET['usuario'];
+				$contrasena = $_GET['contrasena'];
 
 				if (($this->esEntero($id))) {//is_int((int)$id)) { 
 
@@ -127,8 +93,12 @@
 			}
 		}
 
-		function modificar() {
+		function mostrarVistaFormRegistro() {
+    		$encabezado = file_get_contents("views/navegacion.html");
+			$vista = file_get_contents("views/registro.html");
+			$pie = file_get_contents("views/pie.html");
 
+			echo $encabezado.$vista.$pie;
 		}
 	}
 ?>
