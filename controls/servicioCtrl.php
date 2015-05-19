@@ -99,7 +99,8 @@
 						'{descripcion}' => $servicio['descripcion'],
 						'{precio}' => $servicio['precio'], 
 						'{imagen}' => $servicio['imagen'],
-						'{duracion}' => $servicio['duracion']
+						'{duracion}' => $servicio['duracion'],
+						'{referencia-carrito}' => '?ctrl=carrito&act=mostrar'
 					);
 
 					$datos = strtr($pagina,$diccionario);
