@@ -1,0 +1,27 @@
+[
+    {
+        "codigo": "1",
+        "titulo": "Diamond Extreme 50ml",
+        "descripcion": "Crema anti-edad bio-regeneradora extremadamente rica",
+        "precio": 4850.00,
+        "imagen": "img/productos/diamond_extreme.png",
+        "cantidad": 1
+    },
+    {
+        "codigo": "1",
+        "titulo": "Diamond Extreme 50ml",
+        "descripcion": "Crema anti-edad bio-regeneradora extremadamente rica",
+        "precio": 4850.00,
+        "imagen": "img/productos/diamond_extreme.png",
+        "cantidad": 1
+    },
+    {
+        "codigo": "1",
+        "titulo": "Diamond Extreme 50ml",
+        "descripcion": "Crema anti-edad bio-regeneradora extremadamente rica",
+        "precio": 4850.00,
+        "imagen": "img/productos/diamond_extreme.png",
+        "cantidad": 1
+    }
+    
+]

@@ -36,6 +36,10 @@
 				require_once('controls/contactoCtrl.php');
 				$control = new ContactoCtrl();
 				break;
+			case 'carrito':
+				require_once('controls/carritoCtrl.php');
+				$control = new CarritoCtrl();
+				break;
 			default:
 				http_response_code(404);
 				break;

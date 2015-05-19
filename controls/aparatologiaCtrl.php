@@ -46,7 +46,8 @@
 					'{area}' => $servicio ['area'],//$número, 2, '.', ''
 					'{precio-paquete}' => $servicio ['precio-paquete'],
 					'{precio-descuento}' => $servicio ['precio-descuento'],
-					'{precio-sesion}' => $servicio ['precio-sesion']
+					'{precio-sesion}' => $servicio ['precio-sesion'],
+					'{referencia-carrito}' => '?ctrl=carrito&act=mostrar'
 				);
 
 				$nueva_fila = strtr($nueva_fila,$diccionario);

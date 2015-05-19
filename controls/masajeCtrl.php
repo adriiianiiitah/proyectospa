@@ -104,7 +104,8 @@
 						'{descripcion}' => $masaje['descripcion'],
 						'{precio}' => $masaje['precio'], 
 						'{imagen}' => $masaje['imagen'],
-						'{duracion}' => $masaje['duracion']
+						'{duracion}' => $masaje['duracion'],
+						'{referencia-carrito}' => '?ctrl=carrito&act=mostrar'
 					);
 
 					$datos = strtr($pagina,$diccionario);

@@ -16,7 +16,7 @@ function esUsuarioEmailTel(elemento) {
 		abuelo.className = 'form-group has-error';
 		return false;
 	} else {
-		var expreg = /^(([A-Za-z0-9_-]{3,15})|([0-9]{3,4}-? ?.?[0-9]{3}-? ?.?[0-9]{3}) | ([_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3}))+$/;
+		var expreg = /^(([A-Za-z0-9_-]{3,15})|([0-9]{3,4}-? ?.?[0-9]{3}-? ?.?[0-9]{3}) | ([_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})))+$/;
   
 	  if(expreg.test(nombre)) {
 		abuelo.className = 'form-group has-success';
