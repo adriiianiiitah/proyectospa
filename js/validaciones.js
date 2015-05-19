@@ -50,6 +50,27 @@ function esCodigo(elemento) {
 	}
 }
 
+function esCodigoConfirmacion() {
+	var contrasenia1 = document.getElementById('contrasena1');
+	var contrasenia2 = document.getElementById('contrasena2');
+	var codigo = document.getElementById('codigo').value;
+	
+	if(codigo=="") {
+		return false;
+	} else {
+		var expreg = /^([1-9][0-9]{4})+$/;
+  
+	  if(expreg.test(codigo)) {
+		contrasenia1.disabled=false;
+		contrasenia2.disabled=false;
+		return true;
+	  }
+	  else {
+	  	return false;
+	  }
+	}
+}
+
 function esProducto(elemento) {
 	var padre = elemento.parentNode;
 	var nombre = elemento.value;
@@ -282,6 +303,7 @@ function coinciden(elemento) {
 		var expreg = /(^(?=.*[a-z])(?=.*[A-Z])(?=.*\d){6,}.+$)/;
   
 	  if(expreg.test(contrasena2) && (contrasena1==contrasena2)) {
+	  	var boton = document.getElementById('restablecer').disabled=false;
 		abuelo.className = 'form-group has-success';
 		return true;
 	  }
