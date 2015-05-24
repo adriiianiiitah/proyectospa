@@ -1,14 +1,14 @@
 <?php
 
-	//require_once('datos.inc');
+	require_once('datos.inc');
 
 	class BaseDatos {
 		private $coneccion;
 		public static $instancia; 
-		private $servidor = 'localhost';
-		private $usuario = 'root';
-		private $contrasena = 'root';
-		private $base_datos = 'spa';
+		private $servidor = SERVIDOR;
+		private $usuario = USUARIO;
+		private $contrasena = CONTRASENA;
+		private $base_datos = BASE_DATOS;
 		private $_query;
 		private $resultado = array();
 		private $contador = 0;
@@ -39,7 +39,6 @@
 			trigger_error('La clonación de este objeto no está permitida', E_USER_ERROR);
 		}
 
-		// Get mysqli connection
 		public function obtenerConexion() {
 			return $this->conexion;
 		}
@@ -49,7 +48,7 @@
 
 			if($this->_query){
 				if(is_object($this->_query)) {
-					while($fila = $this->_query -> fetch_object()) {
+					while($fila = $this->_query -> fetch_assoc()) {
 						$this -> resultado[] = $fila;
 					}
 					$this -> contador = $this->_query -> num_rows;

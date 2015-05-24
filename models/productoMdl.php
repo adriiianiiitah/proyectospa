@@ -1,9 +1,14 @@
 <?php
-	class ProductoMdl {
-		private $conexion;
+	require_once('estandarMdl.php');
+	require_once('BaseDatos.php');
+
+	class ProductoMdl extends estandarMdl {
+		//private $conexion;
+		public $db;
 		function __construct(){
-			//echo file_get_contents("datos.json",true);
+			parent::__construct();
 		}
+
 		function agregar($imagen, $producto, $id_producto, $descripcion, $precio) {
 			$producto_array = array('imagen' => $imagen,'producto' => $producto,'id_producto' => $id_producto,'descripcion' => $descripcion,'imagen' => $precio, );
 			var_dump($producto_array);
@@ -12,9 +17,18 @@
 			file_put_contents($file, $json_);
 		}
 		function listar() {
+			/*
 			$productos = file_get_contents('productos.json');
 			$json_ = json_decode($productos, true);
-			return $json_;
+			return $json_;*/
+
+			$consulta = 'SELECT * FROM productos';
+			$productos = BaseDatos::obtenerInstancia()->ejecutar($consulta);
+
+			//var_dump($productos->obtenerResultado());
+
+			return $productos->obtenerResultado();
+
 		}
 		function consutar($id) {
 			$productos = file_get_contents('productos.json');
