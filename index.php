@@ -1,4 +1,6 @@
 <?php
+	session_start();
+	
 	if(isset($_GET) && !empty($_GET['ctrl'])) {
 		$control = $_GET['ctrl'];
 

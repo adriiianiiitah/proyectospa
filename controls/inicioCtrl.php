@@ -30,7 +30,7 @@
 		public function mostrar() {
 			$encabezado = file_get_contents("views/encabezado.html");
 			$vista = file_get_contents("views/inicio.html");
-			$pie = file_get_contents("views/pie.html");
+			$pie = $this->pie();
 
 			echo $encabezado.$vista.$pie;
 		}

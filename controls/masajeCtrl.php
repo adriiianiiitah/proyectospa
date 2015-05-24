@@ -51,7 +51,7 @@
 
 			$encabezado = file_get_contents("views/navegacion.html");
 			$vista = file_get_contents("views/masajes.html");
-			$pie = file_get_contents("views/pie.html");
+			$pie = $this->pie();
 
 			$inicio = strrpos($vista,'<!-- empieza -->');
 			$final = strrpos($vista,'<!-- termina -->') + 17;
@@ -87,7 +87,7 @@
 
 					$encabezado = file_get_contents("views/navegacion.html");
 					$vista = file_get_contents("views/ver-masaje.html");
-					$pie = file_get_contents("views/pie.html");
+					$pie = $this->pie();
 
 					$inicio = strrpos($vista,'<!-- empieza -->');
 					$final = strrpos($vista,'<!-- termina -->') + 17;

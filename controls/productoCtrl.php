@@ -59,11 +59,9 @@
 		function listar() {
 			$resultado = $this -> model -> listar(); 
 
-			//var_dump($resultado);
-
 			$encabezado = file_get_contents("views/navegacion.html");
 			$vista = file_get_contents("views/productos.html");
-			$pie = file_get_contents("views/pie.html");
+			$pie = $this->pie();
 
 			$inicio = strrpos($vista,'<!-- empieza -->');
 			$final = strrpos($vista,'<!-- termina -->') + 17;
@@ -99,7 +97,7 @@
 
 					$encabezado = file_get_contents("views/navegacion.html");
 					$vista = file_get_contents("views/ver-producto.html");
-					$pie = file_get_contents("views/pie.html");
+					$pie = $this->pie();
 
 					$inicio = strrpos($vista,'<!-- empieza -->');
 					$final = strrpos($vista,'<!-- termina -->') + 17;

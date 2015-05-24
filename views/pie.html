@@ -30,7 +30,7 @@
                 <div class="col-xs-10 col-xs-offset-1 col-sm-3 form-inicio-sesion">
                     <h3>Iniciar sesión</h3>
                     <div class="form">
-                        <form role="form" action="?ctrl=usuario&act=panel" method="post" onsubmit="return esUsuarioValido(this)">
+                        <form role="form" action="?ctrl=usuario&act=iniciar_sesion" method="post" onsubmit="return esUsuarioValido(this)">
                             <div class="form-group">
                                 <label for="usuario-login" class="sr-only"></label>
                                 <div>
@@ -40,7 +40,7 @@
                             <div class="form-group">
                                 <label for="password-login" class="sr-only"></label>
                                 <div>
-                                    <input type="password" id="password-login" name="password" class="form-control"  onblur="esContrasenia(this)" placeholder="contraseña"/>
+                                    <input type="password" id="password-login" name="contrasena" class="form-control"  onblur="esContrasenia(this)" placeholder="contraseña"/>
                                 </div>
                             </div>
                             <div>

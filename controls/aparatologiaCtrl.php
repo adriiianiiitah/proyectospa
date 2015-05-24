@@ -28,7 +28,7 @@
 		public function mostrar() {
 			$encabezado = file_get_contents("views/navegacion.html");
 			$vista = file_get_contents("views/aparatologia.html");
-			$pie = file_get_contents("views/pie.html");
+			$pie = $this->pie();
 
 			$resultado = $this -> model -> listar(); 
 			

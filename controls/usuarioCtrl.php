@@ -28,6 +28,9 @@
 						$this -> restablecer();
 					}
 					break;
+				case 'iniciar_sesion':
+					$this -> iniciarSesion();
+					break;
 				case 'panel':
 					$this -> mostrarPanel();
 					break;
@@ -52,6 +55,16 @@
 			//$this->limpiarCadena();
 			
 			
+		}
+
+		function iniciarSesion() {
+			if(isset($_POST['usuario']) && isset($_POST['contrasena'])) {
+				$usuario = $this->limpiarCadena($_POST['usuario']);
+				$contrasena = $this->limpiarCadena($_POST['contrasena']);
+				$contrasena = $this->encriptar($contrasena);
+
+				$this->model -> login($usuario,$contrasena);
+			}
 		}
 
 		function mostrarPanel() {

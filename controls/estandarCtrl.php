@@ -40,6 +40,56 @@
 			$cadena = str_ireplace("&","",$cadena);
 			return $cadena;
 		}
+
+		function estaLogueado(){
+			if( isset($_SESSION['usuario']) )
+				return true;
+			return false;
+		}
+
+		function esAdmin(){
+			if( isset($_SESSION['tipo']) && $_SESSION['tipo'] == 'administrador' )
+				return true;
+			return false;
+		}
+
+		function esUsuario(){
+			if( isset($_SESSION['tipo']) && $_SESSION['tipo'] == 'usuario' )
+				return true;
+			return false;
+		}
+		
+		function cerrar_sesion(){
+			session_unset();
+			session_destroy();		
+			setcookie(session_name(), '', time()-3600);
+		}
+		function iniciar_sesion($id_user, $pass){
+			//ir a la base buscarlo validarlo
+			//if ( no lo encontro )
+				//return false;
+			$_SESSION['id_usuario'] = $id_usuario;
+			$_SESSION['tipo'] = $type;
+			$_SESSION['usuario'] = $usuario;
+			return true;
+		}
+
+		function pie() {
+			if($this->estaLogueado()) {
+				$pie = file_get_contents("views/pie_sesion.html");
+				$usuario = $_SESSION['usuario'];
+				$pie = str_replace("{usuario}", $usuario, $pie);
+			} else {
+				$pie = file_get_contents("views/pie.html");
+			}
+
+			return $pie;
+		}
+
+		function encriptar($cadena) {
+			$salt = '$bgr$/'; 
+			return sha1(md5($salt . $cadena));
+		}
 	}
 
 ?>
