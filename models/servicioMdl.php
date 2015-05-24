@@ -1,44 +1,34 @@
 <?php
-	class ServicioMdl {
+	require_once('estandarMdl.php');
+	require_once('BaseDatos.php');
+
+	class ServicioMdl extends estandarMdl{
 		private $conexion;
 
 		function __construct(){
-			
+			parent::__construct();
+			$this->conexion = BaseDatos::obtenerInstancia();
 		}
 
 		function agregar() {
 		}
 
 		function listar() {
-			$servicios = file_get_contents('estetica.json');
-			$json_ = json_decode($servicios, true);
 
-			return $json_;
+			$consulta = 'SELECT * FROM servicios WHERE tipo LIKE "%estetica%"';
+			$servicios = $this->conexion->ejecutar($consulta)->obtenerResultado();
+
+			return $servicios;
 
 		}
 
 		function consutar($id) {
-			$servicios = file_get_contents('estetica.json');
-			$json_ = json_decode($servicios, true);
-			$resultado = array();
 
-			foreach ($json_ as $servicio) {
-				//var_dump($tratamiento);
-				//echo "<br>";
-				//echo "<br>";
-				if($servicio['id_servicio'] == $id) {
-					//var_dump($tratamiento);
-				$resultado = $servicio;
-					
-				break;
-				}
-			}
+			$consulta = 'SELECT * FROM servicios WHERE tipo LIKE "%estetica%" AND codigo="'.$id.'"';
+			$servicios = $this->conexion->ejecutar($consulta)->obtenerResultado()[0];
 
-			return $resultado;
-
+			return $servicios;
 		}
-
-
 
 	}
 

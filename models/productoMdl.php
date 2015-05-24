@@ -3,49 +3,35 @@
 	require_once('BaseDatos.php');
 
 	class ProductoMdl extends estandarMdl {
-		//private $conexion;
-		public $db;
+		public $conexion;
+
 		function __construct(){
 			parent::__construct();
+			$this->conexion = BaseDatos::obtenerInstancia();
 		}
 
-		function agregar($imagen, $producto, $id_producto, $descripcion, $precio) {
-			$producto_array = array('imagen' => $imagen,'producto' => $producto,'id_producto' => $id_producto,'descripcion' => $descripcion,'imagen' => $precio, );
-			var_dump($producto_array);
-			$json_ = json_encode($producto_array);
-			$file = 'productos.json';
-			file_put_contents($file, $json_);
+		function agregar($producto, $descripcion, $precio, $categoria, $marca, $imagen) {
+
+			$query = "INSERT INTO productos (producto,categoria,marca,descripcion,precio,imagen) VALUES('".$categoria."','".$producto."','".$marca."','".$descripcion."','".$precio."','".$imagen."')";
+			$resultado = $this->conexion->ejecutar($query);
+
 		}
+
 		function listar() {
-			/*
-			$productos = file_get_contents('productos.json');
-			$json_ = json_decode($productos, true);
-			return $json_;*/
 
 			$consulta = 'SELECT * FROM productos';
-			$productos = BaseDatos::obtenerInstancia()->ejecutar($consulta);
+			$productos = $this->conexion->ejecutar($consulta)->obtenerResultado();
 
-			//var_dump($productos->obtenerResultado());
-
-			return $productos->obtenerResultado();
+			return $productos;
 
 		}
+
 		function consutar($id) {
-			$productos = file_get_contents('productos.json');
-			$json_ = json_decode($productos, true);
-			$resultado = array();
-			foreach ($json_ as $producto) {
-				//var_dump($producto);
-				//echo "<br>";
-				//echo "<br>";
-				if($producto['codigo'] == $id) {
-					//var_dump($producto);
-				$resultado = $producto;
-					
-				break;
-				}
-			}
-			return $resultado;
+
+			$consulta = 'SELECT * FROM productos WHERE codigo="'.$id.'"';
+			$productos = $this->conexion->ejecutar($consulta)->obtenerResultado();
+
+			return $productos[0];
 		}
 	}
 ?>

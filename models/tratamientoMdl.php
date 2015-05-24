@@ -1,44 +1,34 @@
 <?php
-	class TratamientoMdl {
+	require_once('estandarMdl.php');
+	require_once('BaseDatos.php');
+
+	class TratamientoMdl extends estandarMdl{
 		private $conexion;
 
 		function __construct(){
-			
+			parent::__construct();
+			$this->conexion = BaseDatos::obtenerInstancia();
 		}
 
 		function agregar() {
 		}
 
 		function listar() {
-			$tratamientos = file_get_contents('tratamientos.json');
-			$json_ = json_decode($tratamientos, true);
 
-			return $json_;
+			$consulta = 'SELECT * FROM servicios WHERE tipo LIKE "%tratamiento%"';
+			$tratamientos = $this->conexion->ejecutar($consulta)->obtenerResultado();
+
+			return $tratamientos;
 
 		}
 
 		function consutar($id) {
-			$tratamientos = file_get_contents('tratamientos.json');
-			$json_ = json_decode($tratamientos, true);
-			$resultado = array();
 
-			foreach ($json_ as $tratamiento) {
-				//var_dump($tratamiento);
-				//echo "<br>";
-				//echo "<br>";
-				if($tratamiento['id_servicio'] == $id) {
-					//var_dump($tratamiento);
-				$resultado = $tratamiento;
-					
-				break;
-				}
-			}
+			$consulta = 'SELECT * FROM servicios WHERE tipo LIKE "%tratamiento%" AND codigo="'.$id.'"';
+			$tratamientos = $this->conexion->ejecutar($consulta)->obtenerResultado()[0];
 
-			return $resultado;
-
+			return $tratamientos;
 		}
-
-
 
 	}
 

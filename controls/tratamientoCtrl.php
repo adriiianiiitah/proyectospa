@@ -63,7 +63,7 @@
 					'{descripcion}' => $tratamiento['descripcion'],
 					'{precio}' => $tratamiento['precio'], 
 					'{imagen}' => $tratamiento['imagen'],
-					'{enlace}' => "?ctrl=tratamiento&act=consultar&id=".$tratamiento['id_servicio']
+					'{enlace}' => "?ctrl=tratamiento&act=consultar&id=".$tratamiento['codigo']
 				);
 
 				$tarjetita = strtr($tarjeta,$diccionario);
@@ -90,8 +90,6 @@
 					$pagina = substr($vista,$inicio,$final-$inicio);
 
 					$tratamiento = $this -> model -> consutar($id);
-
-					//var_dump($tratamiento);
 
 					$datos = $pagina;
 					$diccionario = array(

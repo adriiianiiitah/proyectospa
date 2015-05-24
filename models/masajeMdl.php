@@ -1,40 +1,34 @@
 <?php
-	class MasajeMdl {
+	require_once('estandarMdl.php');
+	require_once('BaseDatos.php');
+
+	class MasajeMdl extends estandarMdl{
 		private $conexion;
 
 		function __construct(){
-			//echo file_get_contents("datos.json",true);
+			parent::__construct();
+			$this->conexion = BaseDatos::obtenerInstancia();
 		}
 
 		function agregar() {
+			
 		}
 
 		function listar() {
-			$servicios = file_get_contents('masajes.json');
-			$json_ = json_decode($servicios, true);
 
-			return $json_;
+			$consulta = 'SELECT * FROM servicios WHERE tipo LIKE "%masaje%"';
+			$masajes = $this->conexion->ejecutar($consulta)->obtenerResultado();
+
+			return $masajes;
 
 		}
 
 		function consutar($id) {
-			$servicios = file_get_contents('masajes.json');
-			$json_ = json_decode($servicios, true);
-			$resultado = array();
 
-			foreach ($json_ as $servicio) {
-				//var_dump($servicio);
-				//echo "<br>";
-				//echo "<br>";
-				if($servicio['id_servicio'] == $id) {
-					//var_dump($producto);
-				$resultado = $servicio;
-					
-				break;
-				}
-			}
+			$consulta = 'SELECT * FROM servicios WHERE tipo LIKE "%masaje%" AND codigo="'.$id.'"';
+			$masajes = $this->conexion->ejecutar($consulta)->obtenerResultado()[0];
 
-			return $resultado;
+			return $masajes;
 		}
 	}
 ?>

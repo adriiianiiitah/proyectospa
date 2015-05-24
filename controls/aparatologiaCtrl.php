@@ -31,10 +31,9 @@
 			$pie = file_get_contents("views/pie.html");
 
 			$resultado = $this -> model -> listar(); 
-			//var_dump($resultado);
-
+			
 			$inicio = strrpos($vista,'<!--comienza-fila -->');
-			$fin = strrpos($vista,'<!--termina-fila -->') + 19;
+			$fin = strrpos($vista,'<!--termina-fila -->') + 20;
 
 			$fila = substr($vista,$inicio,$fin-$inicio);
 			$tabla = "";

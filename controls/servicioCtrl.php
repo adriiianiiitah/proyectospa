@@ -63,7 +63,7 @@
 					'{descripcion}' => $servicio['descripcion'],
 					'{precio}' => $servicio['precio'], 
 					'{imagen}' => $servicio['imagen'],
-					'{enlace}' => "?ctrl=estetica&act=consultar&id=".$servicio['id_servicio']
+					'{enlace}' => "?ctrl=estetica&act=consultar&id=".$servicio['codigo']
 				);
 
 				$tarjetita = strtr($tarjeta,$diccionario);

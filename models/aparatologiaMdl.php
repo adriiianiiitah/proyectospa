@@ -1,38 +1,33 @@
 <?php
-	class aparatologiaMdl {
+	require_once('estandarMdl.php');
+	require_once('BaseDatos.php');
+
+	class aparatologiaMdl extends estandarMdl{
 		private $conexion;
 
 		function __construct(){
-			
+			parent::__construct();
+			$this->conexion = BaseDatos::obtenerInstancia();
 		}
 
 		function agregar() {
 		}
 
 		function listar() {
-			$servicios = file_get_contents('aparatologia.json');
-			$json_ = json_decode($servicios, true);
 
-			return $json_;
+			$consulta = 'SELECT * FROM servicios WHERE tipo LIKE "%aparatologia%"';
+			$aparatologia = $this->conexion->ejecutar($consulta)->obtenerResultado();
+
+			return $aparatologia;
+
 		}
 
 		function consutar($id) {
-			$servicios = file_get_contents('aparatologia.json');
-			$json_ = json_decode($servicios, true);
-			$resultado = array();
 
-			foreach ($json_ as $servicio) {
-				//var_dump($tratamiento);
-				//echo "<br>";
-				//echo "<br>";
-				if($servicio['id_servicio'] == $id) {
-					//var_dump($tratamiento);
-				$resultado = $servicio;
-					
-				break;
-				}
-			}
-			return $resultado;
+			$consulta = 'SELECT * FROM servicios WHERE tipo LIKE "%tratamiento%" AND codigo="'.$id.'"';
+			$aparatologia = $this->conexion->ejecutar($consulta)->obtenerResultado()[0];
+
+			return $aparatologia;
 		}
 	}
 
