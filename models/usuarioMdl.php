@@ -1,31 +1,20 @@
 <?php
-	class UsuarioMdl {
+	require_once('estandarMdl.php');
+	require_once('BaseDatos.php');
+
+	class UsuarioMdl extends estandarMdl{
 		private $conexion;
+
 		function __construct(){
-			//echo file_get_contents("datos.json",true);
+			parent::__construct();
+			$this->conexion = BaseDatos::obtenerInstancia();
 		}
 
-		function listar() {/*
-			$productos = file_get_contents('productos.json');
-			$json_ = json_decode($productos, true);
-			return $json_;*/
-		}
-		function consutar($id) {/*
-			$productos = file_get_contents('productos.json');
-			$json_ = json_decode($productos, true);
-			$resultado = array();
-			foreach ($json_ as $producto) {
-				//var_dump($producto);
-				//echo "<br>";
-				//echo "<br>";
-				if($producto['codigo'] == $id) {
-					//var_dump($producto);
-				$resultado = $producto;
-					
-				break;
-				}
-			}
-			return $resultado;*/
+		function login($usuario, $contrasena) {
+			$consulta = 'SELECT * FROM usuarios WHERE usuario ="'.$usuario.'" AND contrasena = "'.$contrasena.'" LIMIT 1';
+			$usuarios = $this->conexion->ejecutar($consulta)->obtenerResultado();
+
+			return $usuarios;
 		}
 	}
 ?>

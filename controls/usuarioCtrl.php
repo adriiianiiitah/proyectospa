@@ -52,9 +52,54 @@
 		}
 		
 		function agregar() {
-			//$this->limpiarCadena();
-			
-			
+			$telefonos = array();
+			print_r($_POST);
+			var_dump($_FILES);
+			if(isset($_POST['nombre']) 	&& isset($_POST['apellidos']) 	&& isset($_POST['usuario']) 
+			&& isset($_POST['email']) 	&& isset($_POST['contrasena']) 	&& isset($_POST['domicilio']) 
+			&& isset($_POST['colonia']) && isset($_POST['municipio']) 	&& isset($_POST['codigo_postal'])
+			&& isset($_POST['telefono'])&& isset($_POST['contrasena'])) {
+				$nombre 		= $this->limpiarCadena($_POST['nombre']);
+				$apellidos 		= $this->limpiarCadena($_POST['apellidos']);
+				$usuario 		= $this->limpiarCadena($_POST['usuario']);
+				$email 			= $this->limpiarCadena($_POST['email']);
+				$contrasena 	= $this->limpiarCadena($_POST['contrasena']);
+				$contrasena2	= $this->limpiarCadena($_POST['contrasena2']);
+				$domicilio 		= $this->limpiarCadena($_POST['domicilio']);
+				$colonia 		= $this->limpiarCadena($_POST['colonia']);
+				$municipio 		= $this->limpiarCadena($_POST['municipio']);
+				$codigo_postal 	= $this->limpiarCadena($_POST['codigo_postal']);
+				
+				$telefonos = array_push($this->limpiarCadena($_POST['telefono']));
+
+				if(isset($_POST['telefono1'])) {
+					$telefonos = array_push($this->limpiarCadena($_POST['telefono1']));
+				}
+
+				if(isset($_POST['telefono2'])) {
+					$telefonos = array_push($this->limpiarCadena($_POST['telefono2']));
+				}
+
+				if(isset($_POST['telefono3'])) {
+					$telefonos = array_push($this->limpiarCadena($_POST['telefono3']));
+				}
+
+				if(isset($_POST['telefono4'])) {
+					$telefonos = array_push($this->limpiarCadena($_POST['telefono4']));
+				}
+
+				if(isset($_POST['telefono3'])) {
+					$telefonos = array_push($this->limpiarCadena($_POST['telefono3']));
+				}
+
+				$telefonos = implode(',', $telefonos);
+
+				if(isset($_FILES['foto']) && !empty($_FILES)) {
+					$imagen = $_FILES['name'];
+					$temporal = $_FILES['tmp_name'];
+					$generado = 
+				}
+			}
 		}
 
 		function iniciarSesion() {
@@ -63,7 +108,7 @@
 				$contrasena = $this->limpiarCadena($_POST['contrasena']);
 				$contrasena = $this->encriptar($contrasena);
 
-				$this->model -> login($usuario,$contrasena);
+				$this -> model -> login($usuario,$contrasena);
 			}
 		}
 
@@ -77,7 +122,7 @@
 		function confirmarCambioContrasenia() {
 			$encabezado = file_get_contents("views/navegacion.html");
 			$vista = file_get_contents("views/confirmacion.html");
-			$pie = file_get_contents("views/pie.html");
+			$pie = $this->pie();
 
 			echo $encabezado.$vista.$pie;
 		}
@@ -85,7 +130,7 @@
 		function mostrarVistaFormRegistro() {
     		$encabezado = file_get_contents("views/navegacion-panel.html");
 			$vista = file_get_contents("views/registro.html");
-			$pie = file_get_contents("views/pie.html");
+			$pie = $this->pie();
 
 			echo $encabezado.$vista.$pie;
 		}
@@ -93,7 +138,7 @@
 		function restablecer() {
     		$encabezado = file_get_contents("views/navegacion.html");
 			$vista = file_get_contents("views/restablecer_contrasena.html");
-			$pie = file_get_contents("views/pie.html");
+			$pie = $this->pie();
 
 			echo $encabezado.$vista.$pie;
 		}

@@ -10,12 +10,27 @@
 			return is_int((int)$valor);
 		}
 
-		function esUsuarioValido($usuario) {
+		function esUsuarioValido($cadena) {
 			$patron = '/^[A-Za-z0-9_-]{3,15}$/';
-			return preg_match($patron, $usuario);
+			return preg_match($patron, $cadena);
 		}
 
-		function esContraseniaValida($conrasenia) {
+		function esNombreValido($cadena) {
+			$patron = '/^(([A-Za-záéíóúñ]{2,})|([A-Za-záéíóúñ]{2,}[\s][A-Za-záéíóúñ]{2,}))+$/';
+			return preg_match($patron, $cadena);
+		}
+
+		function esApellidoValido($cadena) {
+			$patron = '/^(([A-Za-záéíóúñ]{2,})|([A-Za-záéíóúñ]{2,}[\s][A-Za-záéíóúñ]{2,}))+$/';
+			return preg_match($patron, $cadena);
+		}
+
+		function esTelefonoValido($cadena) {
+			$patron = '/^[0-9]{3,4}-? ?.?[0-9]{3}-? ?.?[0-9]{3}$/';
+			return preg_match($patron, $cadena);
+		}
+
+		function esContrasenaValida($conrasena) {
 			
 		}
 

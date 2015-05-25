@@ -1,11 +1,11 @@
 	
 <div class="container container-margen-top">
-	<form class="form-horizontal" role="form" onsubmit="return esRegistroCorrecto(this);" action="?ctrl=usuario&act=panel">
+	<form class="form-horizontal" role="form" onsubmit="return esRegistroCorrecto(this);" action="?ctrl=usuario&act=registro" method="POST" enctype="multipart/form-data">
 
 		<fieldset>
 			<legend>Foto de perfil</legend>
 			<div class="col-xs-8 col-sm-6 col-xs-offset-2 col-sm-offset-3">
-				<input id="file-4" type="file" class="file"  data-upload-url="#" name="foto" id="foto">
+				<input id="file-4" type="file" class="file"  data-upload-url="#" name="foto" id="foto" accept="image/jpeg, image/png, image/jpg">
 			</div>
 		</fieldset>
 

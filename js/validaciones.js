@@ -406,18 +406,20 @@ function esCodigoPostal(elemento) {
 var numero_telefonos = 1;
 
 function agregarTelefono() {
-	var div_telefono = document.getElementById('div-telefono');
-	var nuevo_div = div_telefono.cloneNode(true);
-	var etiqueta = nuevo_div.getElementsByTagName('label')[0];
-	div_telefono.setAttribute('id','div_telefono'+numero_telefonos);
-	etiqueta.setAttribute("for", "telefono"+numero_telefonos);
-	caja =  nuevo_div.getElementsByTagName('input')[0];
-	caja.setAttribute("id", "telefono"+numero_telefonos);
+	if(numero_telefonos < 5) {
+		var div_telefono = document.getElementById('div-telefono');
+		var nuevo_div = div_telefono.cloneNode(true);
+		var etiqueta = nuevo_div.getElementsByTagName('label')[0];
+		div_telefono.setAttribute('id','div_telefono'+numero_telefonos);
+		etiqueta.setAttribute("for", "telefono"+numero_telefonos);
+		caja =  nuevo_div.getElementsByTagName('input')[0];
+		caja.setAttribute("id", "telefono"+numero_telefonos);
 
-	var div_contrasenas = document.getElementById('div-contrasenas');
-	var div_padre = div_telefono.parentNode;
-	div_padre.insertBefore(nuevo_div, div_contrasenas);
-	numero_telefonos++;
+		var div_contrasenas = document.getElementById('div-contrasenas');
+		var div_padre = div_telefono.parentNode;
+		div_padre.insertBefore(nuevo_div, div_contrasenas);
+		numero_telefonos++;
+	}
 }
 
 function quitarTelefono(elemento) {
