@@ -97,6 +97,7 @@
 				if(isset($_FILES['foto']) && !empty($_FILES)) {
 					$imagen = $_FILES['name'];
 					$temporal = $_FILES['tmp_name'];
+					$id_imagen = $this-> model -> regresarUltimoId();
 					$generado = 
 				}
 			}

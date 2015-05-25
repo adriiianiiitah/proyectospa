@@ -105,6 +105,24 @@
 			$salt = '$bgr$/'; 
 			return sha1(md5($salt . $cadena));
 		}
+
+		function obtenerExtensionArchivo($archivo) {
+			$temporal = explode(".", $archivo);
+			return end($temporal);
+		}
+
+		function moverRenombrarImagen($temporal, $generado, $ubicacion){
+			$url = 'img/'.$ubicacion;
+			if (file_exists($url.$generado)) {
+				unlink($url.$generado);
+			}
+			move_uploaded_file($temporal, $url.$generado);
+		}
+
+		function generarNombreImagen($categoria, $id, $extension){
+			$nombre = $categoria.$id.".".$extension;
+			return $nombre;			
+		}
 	}
 
 ?>

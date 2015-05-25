@@ -16,5 +16,9 @@
 
 			return $usuarios;
 		}
+
+		function regresarUltimoId() {
+			return $this->conexion->regresaID();
+		}
 	}
 ?>
